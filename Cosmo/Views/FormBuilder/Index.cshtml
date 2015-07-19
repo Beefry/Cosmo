@@ -1,0 +1,44 @@
+﻿
+@{
+    
+    ViewBag.Title = "Index";
+    ViewBag.isFormBuilder = true;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.FormAPIPath = "/API/FormBuilder/";
+}
+
+<h2>Index</h2>
+<div>
+    <form action="@Url.Action("Create")" method="GET">
+        <button type="submit" class="">Create</button>
+    </form>    
+</div>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td># Fields</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+    @{
+        foreach (Beefry.FormBuilder.Form form in Model)
+        {
+            <tr>
+                <td>@form.ID</td>
+                <td>@form.Name</td>
+                <td>@form.Description</td>
+                <td>@form.Fields.Count</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = form.ID })</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+
+
+

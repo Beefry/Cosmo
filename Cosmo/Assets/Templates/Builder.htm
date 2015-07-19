@@ -1,0 +1,61 @@
+<section class='fb-meta'>
+	<div>
+		<label>
+			<span>Name</span>
+			<input type='text' ng-model="model.name" placeholder="Name"/>
+		</label>
+	</div>
+	<div>
+		<label>
+			<span>Description</span>
+			<input type='text' ng-model="model.description" placeholder="Description"/>
+		</label>
+	</div>
+</section>
+<section class='fb-fields'>
+	<ul ui-sortable ng-model="model.fields">
+		<li class='field-group' ng-repeat="field in model.fields">
+			<div>
+				<div class='field-main'>
+					<span>Type:{{field.type}}</span>
+					<label>
+						<span>Name:</span>
+						<input type='text' class='field-name'/>
+					</label>
+					<button type="button" ng-show="field.hasOptions == true" ng-click="addNewOption(field)">Add Option</button>
+					<button type="button" ng-click="removeField(field.id)">Remove</button>
+				</div>
+				<div class='field-text-value' ng-show='field.type == "text"'>
+					<textarea ng-mode='field.value'></textarea>
+				</div>
+				<div class='field-options' ng-show="field.options.length > 0">
+					<ul ui-sortable ng-model="field.options">
+						<li ng-repeat="option in field.options">
+							<label>
+								<span>Value:</span>
+								<input type="text" ng-model="option.value"/>
+								<button type="button" ng-click="removeOption(field,option.id)">Remove</button>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class='field-controls'>
+		<select class='new-field-type' ng-model="newFieldType">
+			<option value=""></option>
+			<option value="textbox">Textbox</option>
+			<option value="text">Text</option>
+			<option value="textarea">Textarea</option>
+			<option value="radio">Radio</option>
+			<option value="checkbox">Checkbox</option>
+			<option value="select">Select</option>
+			<button type="button">Click</button>
+		</select>
+		<button type='button' ng-click="addNewField()">Add Field</button>
+	</div>
+</section>
+<section class='form-controls'>
+	<button ng-click="saveForm()">Save Form</button>
+</section>

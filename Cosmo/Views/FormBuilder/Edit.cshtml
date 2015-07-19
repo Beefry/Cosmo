@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Edit Form";
+    ViewBag.isFormBuilder = true;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.FormAPIPath = "/API/FormBuilder/";
+}
+
+<h2>Edit Form</h2>
+
+@Html.Raw(String.Format(Beefry.FormBuilder.Form.FormBuilderEditDirective,ViewBag.FormBuilderID))
