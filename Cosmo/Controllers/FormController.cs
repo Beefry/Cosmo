@@ -30,7 +30,7 @@ namespace Cosmo.Controllers
         // GET: /Form/Create
         public ActionResult Create()
         {
-            ViewBag.FormAPIPath = Url.Action("Create");
+            ViewBag.FormAPIPath = "/API/Template/";
             ViewBag.redirectPath = Url.Action("Index");
             return View();
         }
@@ -39,7 +39,7 @@ namespace Cosmo.Controllers
         // GET: /Form/Edit/5
         public ActionResult Edit(int id)
         {
-            ViewBag.FormAPIPath = Url.Action("Create");
+            ViewBag.FormAPIPath = "/API/Template/";
             ViewBag.redirectPath = Url.Action("Index");
             ViewBag.FormBuilderID = id;
             return View();

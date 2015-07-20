@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmo", "Cosmo\Cosmo.csproj
 		{585BD266-E71B-43DE-8272-EF340C8E2E6C} = {585BD266-E71B-43DE-8272-EF340C8E2E6C}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuilderModule", "..\..\FormBuilder\FormBuilderModule\FormBuilderModule\FormBuilderModule.csproj", "{585BD266-E71B-43DE-8272-EF340C8E2E6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormBuilderModule", "..\FormBuilder\FormBuilderModule\FormBuilderModule\FormBuilderModule.csproj", "{585BD266-E71B-43DE-8272-EF340C8E2E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

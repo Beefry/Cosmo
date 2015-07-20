@@ -39,8 +39,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FormBuilderModule">
-      <HintPath>..\..\..\FormBuilder\FormBuilderModule\FormBuilderModule\bin\Debug\FormBuilderModule.dll</HintPath>
+    <Reference Include="FormBuilderModule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\FormBuilder\FormBuilderModule\FormBuilderModule\bin\Debug\FormBuilderModule.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -172,6 +173,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\API\APIAreaRegistration.cs" />
     <Compile Include="Areas\API\Controllers\FormController.cs" />
+    <Compile Include="Areas\API\Controllers\TemplateController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FormController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -210,6 +212,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Templates\Builder.htm" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -244,7 +247,6 @@
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\API\Views\Shared\" />
     <Folder Include="Assets\Templates\" />
-    <Folder Include="Templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
