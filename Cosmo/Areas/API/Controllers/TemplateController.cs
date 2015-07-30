@@ -11,9 +11,9 @@ namespace Cosmo.Areas.API.Controllers
     public class TemplateController : ApiController
     {
         // GET api/template
-        public IEnumerable<string> Get()
+        public List<Template> Get()
         {
-            return new string[] { "value1", "value2" };
+            return ((new TemplateDataAdapter()).GetTemplates()).ToList();
         }
 
         // GET api/template/5

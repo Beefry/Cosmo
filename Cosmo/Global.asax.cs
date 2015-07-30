@@ -19,12 +19,12 @@ namespace Cosmo
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
+
             //Formbuilder config
-            Config.DefaultSettings["DatabaseHostname"] = @"localhost\SPECIO2";
+            Config.DefaultSettings["DatabaseHostname"] = @"WIN-A562EOL5BFO\COSMO";
             Config.DefaultSettings["DatabaseUsername"] = "sa";
-            Config.DefaultSettings["DatabasePassword"] = "#By%eish1";
-            Config cosmoFBConfig = new Config(Server);
+            Config.DefaultSettings["DatabasePassword"] = "1324#By%eish1";
+            Config cosmoFBConfig = new Config(this.Server);
         }
     }
 }

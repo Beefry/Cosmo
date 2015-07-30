@@ -91,7 +91,6 @@ C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.WebPages.Deployment
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.WebPages.dll
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.WebPages.Razor.dll
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\WebGrease.dll
-C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\Newtonsoft.Json.dll
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\FormBuilderModule.pdb
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Net.Http.Formatting.xml
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.Http.xml
@@ -122,3 +121,8 @@ C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\obj\Debug\Cosmo.csprojResolveAssem
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\obj\Debug\Cosmo.dll
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\obj\Debug\Cosmo.pdb
 C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\FormBuilderModule.dll
+C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.Cors.dll
+C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.Http.Cors.dll
+C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\System.Web.Http.Cors.xml
+C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\Newtonsoft.Json.dll
+C:\Users\Justin\Source\Workspaces\Cosmo\Cosmo\bin\Newtonsoft.Json.xml

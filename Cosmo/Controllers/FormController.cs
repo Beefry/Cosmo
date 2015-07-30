@@ -4,62 +4,75 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Beefry.FormBuilder;
-using System.IO;
 
 namespace Cosmo.Controllers
 {
-    public class FormBuilderController : Controller
+    public class FormController : Controller
     {
         //
         // GET: /Form/
         public ActionResult Index()
         {
-            Beefry.FormBuilder.TemplateDataAdapter adapter = new TemplateDataAdapter();
-            Beefry.FormBuilder.TemplateCollection templates = adapter.GetTemplates();
-            return View(templates);
+            FormDataAdapter adapter = new FormDataAdapter();
+            List<Form> Forms;
+            try
+            {
+                Forms = adapter.GetForms();
+                return View(Forms);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Error in Index: " + ex.Message;
+                return View((object)null);
+            }
         }
 
         //
         // GET: /Form/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            ViewBag.FormAPIPath = "/API/Form/";
+            ViewBag.redirectPath = Url.Action("Index");
+            return View(id);
         }
 
         //
         // GET: /Form/Create
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
-            ViewBag.FormAPIPath = "/API/Template/";
+            ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
-            return View();
+            if (id.HasValue)
+                return View(id);
+            else
+                return View();
         }
 
         //
         // GET: /Form/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            ViewBag.FormAPIPath = "/API/Template/";
+            ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
-            ViewBag.FormBuilderID = id;
-            return View();
+            if (id.HasValue)
+            {
+                return View(id);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         //
-        // GET: /Form/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Form/Delete/5
+        // POST: /Form/Edit/5
         [HttpPost]
-        public ActionResult Delete(int id, Beefry.FormBuilder.FormCollection collection)
+        public ActionResult Edit(Form collection)
         {
             try
             {
-                // TODO: Add delete logic here
+                // TODO: Add update logic here
 
                 return RedirectToAction("Index");
             }
@@ -67,6 +80,13 @@ namespace Cosmo.Controllers
             {
                 return View();
             }
+        }
+
+        //
+        // GET: /Form/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
         }
     }
 }
