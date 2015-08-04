@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="content-filter/css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Cosmo</title>
+</head>
+<body>
+<div id='navmenu'>
+	<ul>
+	   <li class='active'><a href='C:\Users\Alex\Desktop\Maint-sys\index.html'><span>Home</span></a></li>
+	   <li><a href='C:\Users\Alex\Desktop\Maint-sys\browse.html'><span>Browse</span></a></li>
+	   <li><a href='#'><span>Maintenance</span></a></li>
+	   <li class='last'><a href='#'><span>PM Forms</span></a></li>
+	   <li class='last'><a href='#'><span>Log Out</span></a></li>
+	</ul>
+	<a class='new_tic cd-btn' href='#0'>New Ticket</a>
+	</div>
+	<main class="cd-main-content">
+		<div class="section">
+			<h1>My Tickets</h1>
+			<div class="item_list">
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[Ticket #]</li>
+					<li>[Ticket Name]</li>
+					<li>[Ticket Desc.]</li>
+				</ul></a>
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[Ticket #]</li>
+					<li>[Ticket Name]</li>
+					<li>[Ticket Desc.]</li>
+				</ul></a>
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[Ticket #]</li>
+					<li>[Ticket Name]</li>
+					<li>[Ticket Desc.]</li>
+				</ul></a>
+			</div> <!-- .ticket_list -->
+		</div><!-- .section -->
+		<div class="section">
+			<h1>Open PO's</h1>
+			<div class="item_list">
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[PM #]</li>
+					<li>[PM Name]</li>
+					<li>[PM Desc.]</li>
+				</ul></a>
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[PM #]</li>
+					<li>[PM Name]</li>
+					<li>[PM Desc.]</li>
+				</ul></a>
+				<a href="#0" class='cd-btn'>
+				<ul class='item'>
+					<li>[PM #]</li>
+					<li>[PM Name]</li>
+					<li>[PM Desc.]</li>
+				</ul></a>
+			</div> <!-- .item_list -->
+		</div><!-- .section -->
+		<!-- your content here -->
+	</main>
+
+	<div class="cd-panel from-right">
+		<header class="cd-panel-header">
+			<h1>Ticket # Here</h1>
+			<a href="#0" class="cd-panel-close">Close</a>
+		</header>
+
+		<div class="cd-panel-container">
+			<div class="cd-panel-content">
+				<form class="form-horizontal ticket_form">
+				<fieldset>
+
+				<div class="cd-filter-block">
+					<h4>Status</h4>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Status</option>
+								<option value=".option1">Open</option>
+								<option value=".option2">Closed</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Assignment</h4>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Assigned To</option>
+								<option value=".option1">Bob</option>
+								<option value=".option2">Joe</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<!-- Text input-->
+				<div class="cd-filter-block">
+					<h4>Title</h4>
+
+					<div class="cd-filter-content">
+						<input type="text" placeholder="What does this refer to?">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Text Area?</h4>
+
+					<div class="cd-filter-content">
+						<textarea>What are the problems/symptoms?</textarea>
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Text Area?</h4>
+
+					<div class="cd-filter-content">
+						<textarea>Enter fixes made/ parts used</textarea>
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Priority</h4>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Priority</option>
+								<option value="high">High</option>
+								<option value="medium">Medium</option>
+								<option value="low">Low</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Due Date</h4>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Due Date</option>
+								<option value="high">Date Picker?</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+				<a href="#" class='cd-btn'>Submit</a>
+				<a href="#" class='cd-btn'>Cancel</a>
+
+				</fieldset>
+				</form>
+			</div> <!-- cd-panel-content -->
+		</div> <!-- cd-panel-container -->
+	</div> <!-- cd-panel -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="content-filter/js/main.js"></script> <!-- Resource jQuery -->
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="content-filter/js/jquery.mixitup.min.js"></script>
+</body>
+</html>
+
+
+
+
+

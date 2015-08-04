@@ -24,7 +24,7 @@ namespace Cosmo
             Config.DefaultSettings["DatabaseHostname"] = @"localhost\SPECIO2";
             Config.DefaultSettings["DatabaseUsername"] = "sa";
             Config.DefaultSettings["DatabasePassword"] = "#By%eish1";
-            Config cosmoFBConfig = new Config(Server,true);
+            Config cosmoFBConfig = new Config(Server);
         }
     }
 }

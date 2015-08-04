@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="content-filter/css/style.css"> <!-- Resource style -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+	<title>Cosmo</title>
+</head>
+<body>
+<div id='navmenu'>
+	<ul>
+	   <li><a href='C:\Users\Alex\Desktop\Maint-sys\index.html'><span>Home</span></a></li>
+	   <li class='active'><a href='\browse.html'><span>Browse</span></a></li>
+	   <li><a href='#'><span>Maintenance</span></a></li>
+	   <li class='last'><a href='#'><span>PM Forms</span></a></li>
+	   <li><a href='#'><span>Log Out</span></a></li>
+	</ul>
+	<a class='new_tic cd-btn' href='#0'>+ New Ticket</a>
+	</div>
+	<main class="cd-main-content">
+		<div class="cd-tab-filter-wrapper">
+			<div class="cd-tab-filter">
+				<ul class="cd-filters">
+					<li class="placeholder">
+						<a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+					</li>
+					<li class="filter"><a class="selected" href="#0" data-type="all">All</a></li>
+					<li class="filter" data-filter=".color-1"><a href="#0" data-type="color-1">Color 1</a></li>
+					<li class="filter" data-filter=".color-2"><a href="#0" data-type="color-2">Color 2</a></li>
+				</ul> <!-- cd-filters -->
+			</div> <!-- cd-tab-filter -->
+		</div> <!-- cd-tab-filter-wrapper -->
+
+			<div class="cd-filter">
+			<form>
+				<div class="cd-filter-block">
+					<h4>Search</h4>
+
+					<div class="cd-filter-content">
+						<input type="search" placeholder="Type keywords here...">
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>cheks</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter=".check1" type="checkbox" id="checkbox1">
+			    			<label class="checkbox-label" for="checkbox1">All</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check2" type="checkbox" id="checkbox2">
+							<label class="checkbox-label" for="checkbox2">Open</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".check3" type="checkbox" id="checkbox3">
+							<label class="checkbox-label" for="checkbox3">Closed</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Assigned To:</h4>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Choose a person</option>
+								<option value=".option1">Bill</option>
+								<option value=".option2">Bob</option>
+								<option value=".option3">Barry</option>
+								<option value=".option4">Bruce</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+
+				<div class="cd-filter-block">
+					<h4>Status</h4>
+
+					<ul class="cd-filter-content cd-filters list">
+						<li>
+							<input class="filter" data-filter="" type="radio" name="radioButton" id="radio1" checked>
+							<label class="radio-label" for="radio1">All</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio2" type="radio" name="radioButton" id="radio2">
+							<label class="radio-label" for="radio2">Open</label>
+						</li>
+
+						<li>
+							<input class="filter" data-filter=".radio3" type="radio" name="radioButton" id="radio3">
+							<label class="radio-label" for="radio3">Closed</label>
+						</li>
+					</ul> <!-- cd-filter-content -->
+				</div> <!-- cd-filter-block -->
+			</form>
+
+			<a href="#0" class="cd-close">Close</a>
+		</div> <!-- cd-filter -->
+
+		<a href="#0" class="cd-filter-trigger">Filters</a>
+
+
+
+
+		<!-- your content here -->
+	</main>
+
+	<div class="cd-panel from-right">
+		<header class="cd-panel-header">
+			<h1>Ticket # Here</h1>
+			<a href="#0" class="cd-panel-close">Close</a>
+		</header>
+
+		<div class="cd-panel-container">
+			<div class="cd-panel-content">
+				<form class="form-horizontal ticket_form">
+				<fieldset>
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Status</option>
+								<option value=".option1">Open</option>
+								<option value=".option2">Closed</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Assigned To</option>
+								<option value=".option1">Bob</option>
+								<option value=".option2">Joe</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+
+				<!-- Text input-->
+					<div class="cd-filter-content">
+						<input type="text" placeholder="What does this refer to?">
+					</div> <!-- cd-filter-content -->
+
+					<div class="cd-filter-content">
+						<textarea>What are the problems/symptoms?</textarea>
+					</div> <!-- cd-filter-content -->
+
+					<div class="cd-filter-content">
+						<textarea>Enter fixes made/ parts used</textarea>
+					</div> <!-- cd-filter-content -->
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Priority</option>
+								<option value="high">High</option>
+								<option value="medium">Medium</option>
+								<option value="low">Low</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+
+					<div class="cd-filter-content">
+						<div class="cd-select cd-filters">
+							<select class="filter" name="selectThis" id="selectThis">
+								<option value="">Due Date</option>
+								<option value="high">Date Picker?</option>
+							</select>
+						</div> <!-- cd-select -->
+					</div> <!-- cd-filter-content -->
+				<a href="#" class='btn btn_submit'>Submit</a>
+				<a href="#" class='btn btn_cancel'>Cancel</a>
+
+				</fieldset>
+				</form>
+			</div> <!-- cd-panel-content -->
+		</div> <!-- cd-panel-container -->
+	</div> <!-- cd-panel -->
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+<!-- <script src="content-filter/js/jquery.mixitup.min.js"></script> -->
+<script src="content-filter/js/main.js"></script> <!-- Resource jQuery -->
+</body>
+</html>
+
+
+
+
+
