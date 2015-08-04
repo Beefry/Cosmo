@@ -11,6 +11,7 @@ namespace Cosmo.Controllers
     {
         //
         // GET: /Form/
+        [Authorize]
         public ActionResult Index()
         {
             FormDataAdapter adapter = new FormDataAdapter();
@@ -29,6 +30,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Details/5
+        [Authorize]
         public ActionResult Details(int id)
         {
             ViewBag.FormAPIPath = "/API/Form/";
@@ -38,6 +40,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Create
+        [Authorize]
         public ActionResult Create(int? id)
         {
             ViewBag.FormAPIPath = "/API/Form/";
@@ -50,6 +53,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             ViewBag.FormAPIPath = "/API/Form/";
@@ -63,30 +67,6 @@ namespace Cosmo.Controllers
                 return View();
             }
             
-        }
-
-        //
-        // POST: /Form/Edit/5
-        [HttpPost]
-        public ActionResult Edit(Form collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        //
-        // GET: /Form/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
         }
     }
 }

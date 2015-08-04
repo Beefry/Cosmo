@@ -12,6 +12,7 @@ namespace Cosmo.Controllers
     {
         //
         // GET: /Form/
+        [Authorize]
         public ActionResult Index()
         {
             Beefry.FormBuilder.TemplateDataAdapter adapter = new TemplateDataAdapter();
@@ -21,6 +22,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Details/5
+        [Authorize]
         public ActionResult Details(int id)
         {
             return View();
@@ -28,6 +30,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.FormAPIPath = "/API/Template/";
@@ -37,36 +40,13 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Edit/5
+        [Authorize]
         public ActionResult Edit(int id)
         {
             ViewBag.FormAPIPath = "/API/Template/";
             ViewBag.redirectPath = Url.Action("Index");
             ViewBag.FormBuilderID = id;
             return View();
-        }
-
-        //
-        // GET: /Form/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Form/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, Beefry.FormBuilder.FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
         }
     }
 }
