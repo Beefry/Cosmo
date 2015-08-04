@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Submited By</th>
+                <th>Submitted Date</th>
+                <th>Template Base</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (Model != null)
+                {
+                    foreach (Beefry.FormBuilder.Form form in Model)
+                    {
+                        <tr>
+                            <td>@form.ID</td>
+                            <td>@form.CreatedBy</td>
+                            <td>@form.CreatedDate</td>
+                            <td><a href="@Url.Action("Edit", "FormBuilder", new { id = form.Template.ID})">@form.Template.Name</a></td>
+                            <td><a href="@Url.Action("Edit", new { id = form.ID.Value })">Edit</a></td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>

@@ -5,33 +5,40 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using Beefry.FormBuilder;
+using System.Web.Http.Cors;
 
 namespace Cosmo.Areas.API.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class FormController : ApiController
     {
         // GET api/form
-        public Form Get()
+        public Form Get(int? templateID = null)
         {
-            Form f = new Form();
-            f.ID = 2;
-            f.Template = new Template();
-            f.Sections = new List<Section>();
-            return f;
+            if (templateID.HasValue)
+            {
+                Form f = new Form();
+                f.New(templateID.Value);
+                return f;
+            }
+            else
+            {
+                return null;
+            }
         }
 
         // GET api/form/5
-        public object Get(int id)
+        public Object Get(int id)
         {
             try
             {
-                Template Template = new Template();
-                Template.Load(id);
-                return Template;
+                Form f = new Form();
+                f.Load(id);
+                return f;
             }
             catch (Exception ex)
             {
-                return new { result="error",error=ex.Message };
+                throw ex;
             }
         }
 

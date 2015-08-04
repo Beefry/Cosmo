@@ -13,7 +13,7 @@
         <button type="submit" class="">Create</button>
     </form>    
 </div>
-<table>
+<table class="table">
     <thead>
         <tr>
             <td>ID</td>
@@ -25,14 +25,14 @@
     </thead>
     <tbody>
     @{
-        foreach (Beefry.FormBuilder.Form form in Model)
+        foreach (Beefry.FormBuilder.Template template in Model)
         {
             <tr>
-                <td>@form.ID</td>
-                <td>@form.Name</td>
-                <td>@form.Description</td>
-                <td>@form.Fields.Count</td>
-                <td>@Html.ActionLink("Edit", "Edit", new { id = form.ID })</td>
+                <td>@template.ID</td>
+                <td>@template.Name</td>
+                <td>@template.Description</td>
+                <td>@template.Sections.Sum(section => section.Fields.Count)</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { id = template.ID })</td>
             </tr>
         }
     }

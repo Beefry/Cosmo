@@ -4,69 +4,69 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Beefry.FormBuilder;
-using System.IO;
 
 namespace Cosmo.Controllers
 {
-    public class FormBuilderController : Controller
+    public class FormController : Controller
     {
         //
         // GET: /Form/
+        [Authorize]
         public ActionResult Index()
         {
-            Beefry.FormBuilder.TemplateDataAdapter adapter = new TemplateDataAdapter();
-            Beefry.FormBuilder.TemplateCollection templates = adapter.GetTemplates();
-            return View(templates);
+            FormDataAdapter adapter = new FormDataAdapter();
+            List<Form> Forms;
+            try
+            {
+                Forms = adapter.GetForms();
+                return View(Forms);
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Error = "Error in Index: " + ex.Message;
+                return View((object)null);
+            }
         }
 
         //
         // GET: /Form/Details/5
+        [Authorize]
         public ActionResult Details(int id)
         {
-            return View();
+            ViewBag.FormAPIPath = "/API/Form/";
+            ViewBag.redirectPath = Url.Action("Index");
+            return View(id);
         }
 
         //
         // GET: /Form/Create
-        public ActionResult Create()
+        [Authorize]
+        public ActionResult Create(int? id)
         {
-            ViewBag.FormAPIPath = Url.Action("Create");
+            ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
-            return View();
+            if (id.HasValue)
+                return View(id);
+            else
+                return View();
         }
 
         //
         // GET: /Form/Edit/5
-        public ActionResult Edit(int id)
+        [Authorize]
+        public ActionResult Edit(int? id)
         {
-            ViewBag.FormAPIPath = Url.Action("Create");
+            ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
-            ViewBag.FormBuilderID = id;
-            return View();
-        }
-
-        //
-        // GET: /Form/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        //
-        // POST: /Form/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, Beefry.FormBuilder.FormCollection collection)
-        {
-            try
+            if (id.HasValue)
             {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                return View(id);
             }
-            catch
+            else
             {
                 return View();
             }
+            
         }
     }
 }
