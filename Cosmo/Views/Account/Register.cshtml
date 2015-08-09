@@ -30,6 +30,15 @@
         </div>
     </div>
     <div class="form-group">
+        <select>
+            @{ foreach (var role in System.Web.Security.Roles.GetAllRoles())
+             {
+                <option value="@role">Role: @role</option>
+             }
+            }
+        </select>
+    </div>
+    <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
             <input type="submit" class="btn btn-default" value="Register" />
         </div>

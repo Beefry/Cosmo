@@ -33,6 +33,7 @@ namespace Cosmo.Controllers
         [Authorize]
         public ActionResult Create()
         {
+            
             ViewBag.FormAPIPath = "/API/Template/";
             ViewBag.redirectPath = Url.Action("Index");
             return View();

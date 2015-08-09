@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Beefry.FormBuilder;
+using System.Web.Security;
 
 namespace Cosmo.Controllers
 {
@@ -14,6 +15,7 @@ namespace Cosmo.Controllers
         [Authorize]
         public ActionResult Index()
         {
+            
             FormDataAdapter adapter = new FormDataAdapter();
             List<Form> Forms;
             try
