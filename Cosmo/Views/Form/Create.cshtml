@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.isFormBuilder = true;
@@ -7,13 +6,11 @@
 
 <h2>Create</h2>
 @{
-    if (Model != null)
-    {
-        @Html.Raw(String.Format(Beefry.FormBuilder.Form.FormDisplayNewDirective,Model))
+	if(Model != null) {
+        @Html.Raw(String.Format(Beefry.FormBuilder.Form.FormDisplayEditDirective,Model==null?"null":Model))
     }
     else
     {
-        <div>Error, no template ID was provided.</div>
+        <div>Error, no template ID was supplied.</div>
     }
 }
-

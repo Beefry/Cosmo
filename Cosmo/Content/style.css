@@ -8,6 +8,15 @@ main[ng-app] .fb-template-title {
   font-size: 1.8em;
   margin: 20px 0px; }
 
+.frm-btn {
+  background: linear-gradient(#89ba2c, #6C9225);
+  border: 2px solid #A3C169;
+  padding: 10px 15px;
+  text-shadow: 1px 1px 1px #fff;
+  border-radius: 3px; }
+  .frm-btn:active, .frm-btn:hover {
+    background: linear-gradient(#6C9225, #89ba2c); }
+
 .fb-section {
   padding: 30px;
   border: 1px solid white;
@@ -99,7 +108,9 @@ a {
 
 main {
   margin-top: 80px;
-  padding: 40px; }
+  padding: 40px;
+  margin: 80px auto 0px;
+  max-width: 1170px; }
 
 /* --------------------------------
 

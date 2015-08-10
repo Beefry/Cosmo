@@ -1,0 +1,398 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Templates/Template.cs",
+			"settings":
+			{
+				"buffer_size": 2321,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Config.cs",
+			"settings":
+			{
+				"buffer_size": 15324,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Forms/Form.cs",
+			"settings":
+			{
+				"buffer_size": 2676,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"terminal",
+				"Preferences: Terminal Settings – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control Remove Pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control list",
+				"Package Control: List Packages"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Web Projects/Projects/FormBuilderModule",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Forms",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Templates"
+	],
+	"file_history":
+	[
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Config.cs",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Form/FBProj.sublime-project",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/FormBuilder/Create.cshtml",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/_variables.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/style.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/bourbon/_bourbon.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/_mixins.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/Templates/Builder.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Shared/_Layout.cshtml",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/gulpfile.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/gulpfile.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/main.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Templates/Builder.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/style.css",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/maps/style.css.map",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Scripts/app.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Shared/_LoginPartial.cshtml",
+		"/C/Users/Coop/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/maps/style.css.map",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/package.json",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/Partials/_mixins.scss",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/App/gulpfile.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/npm-debug.log",
+		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/App/package.json",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/index.html",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/browse.html",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/scss/style.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/Site.css",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/js/main.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/HomeController.cs",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/FormController.cs",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/FormBuilderController.cs",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/AccountController.cs",
+		"/C/Web Projects/Projects/Cosmo/Cosmo.sln"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"fb-form",
+			"default blur",
+			"required",
+			"red",
+			"<input",
+			"+",
+			"fb-field",
+			"5px",
+			"main",
+			"body",
+			"main",
+			"C:\\users\\alex\\desktop\\maint-sys\\"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Templates/Template.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1429,
+								1429
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Config.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15324,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3820,
+								3820
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/Components/Forms/Form.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								671,
+								671
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "FBProj.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"config.cs",
+				"FormBuilderModule\\Components\\Config.cs"
+			],
+			[
+				"create.",
+				"Cosmo\\Views\\Form\\Create.cshtml"
+			],
+			[
+				"formbuildercon",
+				"Cosmo\\Controllers\\FormBuilderController.cs"
+			],
+			[
+				"controller",
+				"Cosmo\\Areas\\API\\Controllers\\TemplateController.cs"
+			],
+			[
+				"variable",
+				"Maint-sys\\partials\\_variables.scss"
+			],
+			[
+				"builder.htm",
+				"Cosmo\\Templates\\Builder.htm"
+			],
+			[
+				"_layout.cshtml",
+				"Cosmo\\Views\\Shared\\_Layout.cshtml"
+			],
+			[
+				"gulpfile",
+				"Cosmo\\gulpfile.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "Cos",
+		"selected_items":
+		[
+			[
+				"Cos",
+				"C:\\Web Projects\\Projects\\Cosmo\\CosProj.sublime-project"
+			],
+			[
+				"",
+				"C:\\Web Projects\\Projects\\Cosmo\\CosProj.sublime-project"
+			],
+			[
+				"CosProj",
+				"C:\\Web Projects\\Projects\\Cosmo\\CosProj.sublime-project"
+			],
+			[
+				"Cosmo",
+				"C:\\Web Projects\\Projects\\Cosmo\\Cosmo\\Views\\Form\\FBProj.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 231.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

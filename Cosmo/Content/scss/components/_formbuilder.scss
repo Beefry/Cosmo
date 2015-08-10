@@ -1,0 +1,113 @@
+main[ng-app] {
+	input, select, option {
+		height:2em;
+		font-size:1em;
+		padding:0 5px;
+	}
+
+	.fb-template-title {
+		height:1.5em;
+		font-size:1.8em;
+		margin:20px 0px;
+	}
+}
+
+.frm-btn { 
+	background:linear-gradient($color-2,$color-2-darker);
+	border:2px solid $color-2-lighter;
+	padding:10px 15px;
+	text-shadow:1px 1px 1px #fff;
+	border-radius:3px;
+
+	&:active, &:hover {
+		background:linear-gradient($color-2-darker, $color-2);
+	}
+}
+
+.fb-section {
+	padding:30px;
+	border:1px solid white;
+	margin:20px 0px;
+	position:relative;
+
+	&-new {
+		border:1px dashed white;
+		text-align: center;
+		color:white;
+		cursor:pointer;
+	}
+	&-title {
+		position:absolute;
+		top:-8px;
+		left:10px;
+		background-color:$color-3;
+		padding:0px 5px;
+		border:none;
+		height:1em;
+	}
+}
+
+.fb-field {
+	margin:20px 0px;
+	border:1px solid white;
+	padding:20px 10px;
+	position:relative;
+	min-height:50px;
+	
+	textarea {
+		width:100%;
+		max-width:100%;
+	}
+
+	&-new {
+		border:1px dashed white;
+		text-align: center;
+		color:white;
+		padding:20px;
+
+		div {
+			display:inline-block;
+			height:100%;
+			font-size:1.3em;
+			margin-left:10px;
+			cursor:pointer;
+		}
+	}
+
+	&-title {
+		position:absolute;
+		top:-8px;
+		left:10px;
+		background-color:$color-3;
+		padding:0px 5px;
+		border:none;
+		height:1em;
+	}
+
+	&-options {
+		margin-top:5px;
+	}
+
+	.fb-option {
+		margin:20px 0px;
+		position:relative;
+
+		&-new {
+			border:1px dashed white;
+			text-align: center;
+			color:white;
+			padding:10px;
+			cursor:pointer;
+		}
+
+		.close-btn {
+			display:inline-block;
+			position:static;
+			margin-left:10px;
+		}
+	}
+}
+
+input.ng-invalid.ng-touched {
+	border:1px solid red;
+}

@@ -38,7 +38,7 @@
                     </li>
                     <li class='fb-field fb-field-new'>
                         <select class='new-field-type' ng-model="section.newFieldType">
-                            <option value=""></option>
+                            <option value="">[New field type]</option>
                             <option value="textbox">Textbox</option>
                             <option value="text">Text</option>
                             <option value="textarea">Textarea</option>
@@ -60,7 +60,6 @@
         </ul>
     </section>
     <section class='form-controls'>
-        <span>Status: {{fb_form.$valid}}</span>
-        <button type="submit">Save Form</button>
+        <button class="frm-btn" type="submit">Save Form</button>
     </section>
 </form>

@@ -156,8 +156,8 @@ angular.module('formbuilder')
 
 				// if(typeof $scope.FormBuilderID != "undefined") {
 				// }
-
-				if(typeof $scope.FormBuilderID != "undefined") {
+				console.log($scope.FormBuilderID);
+				if($scope.FormBuilderID != "null") {
 					templateAPI.get($scope.FormBuilderID,function(data) {
 						$scope.model = data;
 					});
