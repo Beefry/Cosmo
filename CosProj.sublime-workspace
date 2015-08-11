@@ -65,7 +65,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cooper/Cosmo"
+		"/C/Web Projects/Projects/Cosmo",
+		"/C/Web Projects/Projects/Cosmo/Cosmo",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/Templates",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/partials",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/scss"
 	],
 	"file_history":
 	[
@@ -174,8 +182,8 @@
 						"selection":
 						[
 							[
-								371,
-								371
+								644,
+								644
 							]
 						],
 						"settings":
