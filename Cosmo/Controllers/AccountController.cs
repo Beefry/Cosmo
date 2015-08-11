@@ -63,7 +63,8 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Account/Register
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
+        [AllowAnonymous]
         public ActionResult Register()
         {
             return View();
@@ -72,7 +73,8 @@ namespace Cosmo.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -117,7 +119,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Account/Manage
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -135,7 +137,7 @@ namespace Cosmo.Controllers
         // POST: /Account/Manage
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
         public async Task<ActionResult> Manage(ManageUserViewModel model)
         {
             bool hasPassword = HasPassword();
@@ -186,7 +188,8 @@ namespace Cosmo.Controllers
         //
         // POST: /Account/ExternalLogin
         [HttpPost]
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult ExternalLogin(string provider, string returnUrl)
         {
@@ -224,6 +227,7 @@ namespace Cosmo.Controllers
         //
         // POST: /Account/LinkLogin
         [HttpPost]
+        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public ActionResult LinkLogin(string provider)
         {

@@ -9,11 +9,12 @@ namespace Cosmo.Controllers
 {
     public class HomeController : Controller
     {
-        [Authorize]
-        public ActionResult Index()
+        //[Authorize]
+        public void Index()
         {
             //TODO: redirect to Dashboard
-            return View();
+            RedirectToAction("Dashboard");
+            //return View();
         }
 
         public ActionResult About()
@@ -23,7 +24,7 @@ namespace Cosmo.Controllers
             return View();
         }
 
-        [Authorize]
+        //[Authorize]
         public ActionResult Dashboard()
         {
             ViewBag.Message = "Your contact page.";

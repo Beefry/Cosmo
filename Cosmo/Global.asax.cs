@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using Beefry.FormBuilder;
+using System.Web.Security;
 
 namespace Cosmo
 {
@@ -21,7 +22,7 @@ namespace Cosmo
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
             //Formbuilder config
-            Config.DefaultSettings["DatabaseHostname"] = @"COOPER\SQLEXPRESS";
+            Config.DefaultSettings["DatabaseHostname"] = @"WIN-A562EOL5BFO\COSMO";
             Config.DefaultSettings["DatabaseUsername"] = "sa";
             Config.DefaultSettings["DatabasePassword"] = "1324#By%eish1";
             Config cosmoFBConfig = new Config(Server);

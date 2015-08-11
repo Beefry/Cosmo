@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/reset.css" rel="stylesheet" />
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif' rel='stylesheet' type='text/css'>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    <title>Cosmo</title>
+</head>
+<body>
+    <div id='navmenu'>
+        <ul>
+            <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
+            <li>@Html.ActionLink("Templates", "Index", "FormBuilder")</li>
+            <li>@Html.ActionLink("Forms", "Index", "Form")</li>
+            <li><a href='#'><span>Maintenance</span></a></li>
+        </ul>
+        <div class="second_controls">
+            @Html.Partial("_LoginPartial")
+            <a class='new_tic cd-btn' href='#0'>+ New Ticket</a>
+        </div>            
+    </div>
+    <main ng-app="beefry.fb">
+        @RenderBody()
+    </main>
+
+    <script src="js/main.js"></script> <!-- Resource jQuery -->
+    <!-- <script src="content-filter/js/jquery.mixitup.min.js"></script> -->
+    <script src="content-filter/js/main.js"></script> <!-- Resource jQuery -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
+    @{ if (ViewBag.isFormBuilder != null)
+     {
+        @Scripts.Render("~/bundles/formbuilder")
+        <script>angular.module('formbuilder').constant('templateAPIPath', '@ViewBag.FormAPIPath');</script>
+        <script>angular.module('formdisplayer').constant('formAPIPath', '@ViewBag.FormAPIPath');</script>
+        <script>angular.module('formbuilder').constant('redirectPath', '@ViewBag.redirectPath');</script>
+     }
+    }
+    @RenderSection("scripts", required: false)
+</body>
+</html>
