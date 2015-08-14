@@ -14,6 +14,30 @@
 				"buffer_size": 15950,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "Cosmo/Content/scss/components/_formbuilder.scss",
+			"settings":
+			{
+				"buffer_size": 1621,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Cosmo/Content/scss/partials/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 392,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Cosmo/Templates/Builder.htm",
+			"settings":
+			{
+				"buffer_size": 3842,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -71,6 +95,8 @@
 		"/C/Web Projects/Projects/Cosmo/Cosmo/App/Templates",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/components",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials",
 		"/C/Web Projects/Projects/Cosmo/Maint-sys",
 		"/C/Web Projects/Projects/Cosmo/Maint-sys/partials",
 		"/C/Web Projects/Projects/Cosmo/Maint-sys/scss"
@@ -166,7 +192,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -182,8 +208,8 @@
 						"selection":
 						[
 							[
-								644,
-								644
+								389,
+								389
 							]
 						],
 						"settings":
@@ -193,6 +219,93 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Cosmo/Content/scss/components/_formbuilder.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								383,
+								383
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Cosmo/Content/scss/partials/_variables.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								121,
+								121
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Cosmo/Templates/Builder.htm",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3842,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2689,
+								2689
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -251,7 +364,7 @@
 		[
 			[
 				"builder",
-				"Cosmo\\App\\Templates\\Builder.htm"
+				"Cosmo\\Templates\\Builder.htm"
 			],
 			[
 				"builder.htm",
