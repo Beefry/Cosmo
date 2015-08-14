@@ -7,7 +7,7 @@ angular.module('formbuilder')
 				FormBuilderID: "@id"
 			},
 			controllerAs: 'Builder',
-			controller: ['$scope','$window','templateAPI','redirectPath',function($scope,$window,templateAPI,redirectPath){
+			controller: ['$scope','$window','templateAPI',function($scope,$window,templateAPI){
 				var builder = this;
 				var Section = function() {
 					this.ID = null;
@@ -127,7 +127,7 @@ angular.module('formbuilder')
 					});
 					templateAPI.save($scope.model,function(data) {
 						if(data.result == "success") {
-							$window.location.href = redirectPath;
+							$window.location.href = "/Template/";
 						} else if (data.result == "error") {
 							//Display Error Message
 						} else {

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Created By</td>
+            <td>Created Date</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(Beefry.FormBuilder.Form Form in Model) {
+                <tr>
+                    <td>@Form.ID</td>
+                    <td>@Form.CreatedBy</td>
+                    <td>@Form.CreatedDate</td>
+                    <td>@Html.ActionLink("Edit", "Edit", new { id = Form.ID })</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -43,14 +43,11 @@ namespace Cosmo.Controllers
         //
         // GET: /Form/Create
         [Authorize]
-        public ActionResult Create(int? id)
+        public ActionResult Create(int id)
         {
             ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
-            if (id.HasValue)
-                return View(id);
-            else
-                return View();
+            return View(id);
         }
 
         //

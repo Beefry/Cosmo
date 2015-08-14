@@ -1,20 +1,20 @@
 angular.module('formdisplayer')
-.service('formAPI',['$resource','formAPIPath',function($resource,formAPIPath){
+.service('formAPI',['$resource',function($resource){
 	this.save = function(form,callback) {
-		Form = $resource(formAPIPath);
+		Form = $resource('/API/Form/');
 		// console.log(form);
 		Form.save(form,function(data){
 			callback(data);
 		});
 	}
 	this.get = function(id, callback) {
-		Form = $resource(formAPIPath + ":ID");
+		Form = $resource("/API/Form/:ID");
 		Form.get({ID:id},function(data){
 			callback(data);
 		});
 	};
 	this.newForm = function(templateID, callback) {
-		Form = $resource(formAPIPath + "?templateID=:templateID");
+		Form = $resource("/API/Form/?templateID=:templateID");
 		Form.get({templateID:templateID},function(data) {
 			callback(data);
 		});

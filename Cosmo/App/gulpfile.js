@@ -25,7 +25,7 @@ gulp.task('concat', function(){
 	.pipe(gulp.dest('../Scripts/'));
 });
 
-gulp.task('watch', function() {
+gulp.task('default', function() {
 	gulp.watch('angularjs/**/*.js',['concat']);
 	gulp.watch('sass/*.sass',['sass']);
 });

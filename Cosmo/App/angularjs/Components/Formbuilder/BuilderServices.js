@@ -1,14 +1,14 @@
 angular.module('formbuilder')
-.service('templateAPI',['$resource','templateAPIPath',function($resource,templateAPIPath){
+.service('templateAPI',['$resource',function($resource){
 	this.save = function(form,callback) {
-		Form = $resource(templateAPIPath);
+		Form = $resource("/API/Template/");
 		// console.log(form);
 		Form.save(form,function(data){
 			callback(data);
 		});
 	}
 	this.get = function(id, callback) {
-		Form = $resource(templateAPIPath + ":ID");
+		Form = $resource("/API/Template/:ID");
 		Form.get({ID:id},function(data){
 			callback(data);
 		});
