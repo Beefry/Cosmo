@@ -12,8 +12,10 @@ angular.module('formdisplayer')
 				var displayer = this;
 				var mode = "";
 
-				console.log(typeof $scope.TemplateID);
-				console.log(typeof $scope.FormID);
+				$scope.showSuccess = false;
+				$scope.successMessage = "";
+				$scope.showError = false;
+				$scope.errorMessage = "";
 
 				if(typeof $scope.FormID != "undefined") {
 					formAPI.get($scope.FormID,function(data) {
@@ -31,6 +33,19 @@ angular.module('formdisplayer')
 				$scope.saveForm = function() {
 					formAPI.save($scope.model,function(data){
 						console.log(data);
+						if(data.result == "success") {
+							$scope.showSuccess = true;
+							$scope.successMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showSuccess = false;
+							},3000);
+						} else {
+							$scope.showError = true;
+							$scope.errorMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showError = false;
+							}, 1000);
+						}
 					});
 				};
 			}]

@@ -1,3 +1,5 @@
+<div class='fb-error' ng-class="{'show': showError==true}">{{errorMessage}}</div>
+<div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
 <form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
     <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name" required ng-model-options="{ updateOn: 'blur' }" />
     <section class='fb-meta fb-section'>
@@ -28,7 +30,7 @@
                             <ul ui-sortable ng-model="field.Options">
                                 <li class='fb-option' ng-repeat="option in field.Options">
                                     <div>
-                                        <input type="text" ng-model="option.Value" required ng-model-options="{ updateOn: 'blur' }" />
+                                        <input type="text" ng-model="option.Value" ng-model-options="{ updateOn: 'blur' }" />
                                         <a class="close-btn" type="button" ng-click="removeOption(field,option)">X</a>
                                     </div>
                                 </li>

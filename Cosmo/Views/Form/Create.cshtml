@@ -7,7 +7,7 @@
 <h2>Create</h2>
 @{
 	if(Model != null) {
-        @Html.Raw(String.Format(Beefry.FormBuilder.Form.FormDisplayDirective,Model==null?"null":Model))
+        @Html.Raw(String.Format(Beefry.FormBuilder.Form.FormDisplayDirective,Model,""))
     }
     else
     {

@@ -655,17 +655,78 @@ angular.module('ui.sortable', [])
   ]);
 
 angular.module("beefry.fb",['ngResource','formbuilder','formdisplayer']);
-angular.module('formbuilder',['ui.sortable']);
-angular.module('formdisplayer',[]);
-function Section() {
+// function Section() {
+// 	this.ID = null;
+// 	this.FormID = $scope.model.ID;
+// 	this.SortOrder = null;
+// 	this.Name = "";
+// 	this.Fields = [];
+// 	this.newFieldType = "";
+// }
+// function Field(section) {
+// 	this.Type = section.newFieldType;
+// 	this.SectionID = section.ID;
+// 	this.Values = [];
+
+// 	switch (this.Type) {
+// 		case 'textbox':
+// 		case 'textarea':
+// 		case 'text':
+// 			this.hasOptions = false;
+// 			break;
+// 		case 'select':
+// 		case 'checkbox':
+// 		case 'radio':
+// 			this.hasOptions = true;
+// 			this.Options = [];
+// 			break;
+// 		case '':
+// 			throw new Error("Please select a field type first.");
+// 			break;
+// 		default:
+// 			throw new Error("Field type not supported. Type given: " + this.Type);
+// 			break;
+// 	}
+
+// 	if (this.Type == 'text')
+// 		this.Options = [new Option(this)];
+// 	else
+// 		this.Options = [];
+
+// 	if(section.Fields.length > 0) {
+// 		this.SortOrder = (section.Fields.reduce(function(prev,curr){
+// 		    if (curr.SortOrder > prev)
+// 		        return curr.SortOrder;
+// 			else
+// 				return prev;
+// 		},0))+1;
+// 	} else {
+// 	    this.SortOrder = 1;
+// 	}
+// }
+
+// function Option(field) {
+// 	this.FieldID = field.ID;
+// 	this.Value = "";
+// }
+
+// function Template () {
+// 	this.ID = null;
+// 	this.Name = null;
+// 	this.Description = null;
+// 	this.Sections = [];
+// }
+
+var Section = function(template) {
 	this.ID = null;
-	this.FormID = $scope.model.ID;
+	this.FormID = template.ID;
 	this.SortOrder = null;
 	this.Name = "";
 	this.Fields = [];
 	this.newFieldType = "";
-}
-function Field(section) {
+};
+
+var Field = function(section) {
 	this.Type = section.newFieldType;
 	this.SectionID = section.ID;
 	this.Values = [];
@@ -695,29 +756,41 @@ function Field(section) {
 	else
 		this.Options = [];
 
-	if(section.Fields.length > 0) {
-		this.SortOrder = (section.Fields.reduce(function(prev,curr){
-		    if (curr.SortOrder > prev)
-		        return curr.SortOrder;
-			else
-				return prev;
-		},0))+1;
-	} else {
-	    this.SortOrder = 1;
-	}
-}
+	// if(section.Fields.length > 0) {
+	// 	this.SortOrder = (section.Fields.reduce(function(prev,curr){
+	// 	    if (curr.SortOrder > prev)
+	// 	        return curr.SortOrder;
+	// 		else
+	// 			return prev;
+	// 	},0))+1;
+	// } else {
+	//     this.SortOrder = 1;
+	// }
+};
 
-function Option(field) {
+var Option = function(field) {
 	this.FieldID = field.ID;
 	this.Value = "";
-}
+};
 
-function Template () {
+var Template = function () {
 	this.ID = null;
 	this.Name = null;
 	this.Description = null;
 	this.Sections = [];
+};
+////////////GLOBAL FUNCTIONS/////////////////////
+
+function flashInformation(opts) {
+	opts.timeout = opts.timeout ? opts.timeout : 1000;
+	opts.canShow = true;
+	opts.messageVar = opts.message;
+	setTimeout(opts.timeout,function(){
+		canShow = false;
+	});
 }
+angular.module('formbuilder',['ui.sortable']);
+angular.module('formdisplayer',[]);
 
 angular.module('formbuilder')
 .service('templateAPI',['$resource',function($resource){
@@ -766,72 +839,23 @@ angular.module('formbuilder')
 				FormBuilderID: "@id"
 			},
 			controllerAs: 'Builder',
-			controller: ['$scope','$window','templateAPI',function($scope,$window,templateAPI){
+			controller: ['$scope','$window','$timeout','templateAPI',function($scope,$window,$timeout,templateAPI){
 				var builder = this;
-				var Section = function() {
-					this.ID = null;
-					this.FormID = $scope.model.ID;
-					this.SortOrder = null;
-					this.Name = "";
-					this.Fields = [];
-					this.newFieldType = "";
-				};
-				var Field = function(section) {
-					this.Type = section.newFieldType;
-					this.SectionID = section.ID;
-					this.Values = [];
-
-					switch (this.Type) {
-						case 'textbox':
-						case 'textarea':
-						case 'text':
-							this.hasOptions = false;
-							break;
-						case 'select':
-						case 'checkbox':
-						case 'radio':
-							this.hasOptions = true;
-							this.Options = [];
-							break;
-						case '':
-							throw new Error("Please select a field type first.");
-							break;
-						default:
-							throw new Error("Field type not supported. Type given: " + this.Type);
-							break;
-					}
-
-					if (this.Type == 'text')
-						this.Options = [new Option(this)];
-					else
-						this.Options = [];
-
-					if(section.Fields.length > 0) {
-						this.SortOrder = (section.Fields.reduce(function(prev,curr){
-						    if (curr.SortOrder > prev)
-						        return curr.SortOrder;
-							else
-								return prev;
-						},0))+1;
-					} else {
-					    this.SortOrder = 1;
-					}
-				};
-
-				var Option = function(field) {
-					this.FieldID = field.ID;
-					this.Value = "";
-				};
-
-				var Template = function () {
-					this.ID = null;
-					this.Name = null;
-					this.Description = null;
-					this.Sections = [];
-				};
-
+				
+				$scope.showSuccess = false;
+				$scope.successMessage = "";
+				$scope.showError = false;
+				$scope.errorMessage = "";
 				$scope.model = new Template();
 				$scope.newFieldType = "";
+
+				$scope.testInfo = function() {
+					$scope.showSuccess = true;
+					$scope.successMessage = "Your form template was saved sucessfully!";
+					$timeout(function(){
+						$scope.showSuccess = false;
+					},3000);
+				};
 
 				$scope.addField = function(section) {
 					try {
@@ -865,7 +889,7 @@ angular.module('formbuilder')
 				};
 
 				$scope.addSection = function() {
-					$scope.model.Sections.push(new Section());
+					$scope.model.Sections.push(new Section($scope.model));
 				}
 
 				$scope.removeSection = function(section) {
@@ -885,12 +909,21 @@ angular.module('formbuilder')
 						})
 					});
 					templateAPI.save($scope.model,function(data) {
+						console.log(data);
 						if(data.result == "success") {
-							$window.location.href = "/Template/";
+							$scope.showSuccess = true;
+							$scope.successMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showSuccess = false;
+							},3000);
 						} else if (data.result == "error") {
-							//Display Error Message
+							$scope.showError = true;
+							$scope.errorMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showError = false;
+							}, 1000);
 						} else {
-							//Result unknown.
+							console.log("Else");
 						}
 					});
 				};
@@ -915,7 +948,6 @@ angular.module('formbuilder')
 
 				// if(typeof $scope.FormBuilderID != "undefined") {
 				// }
-				console.log($scope.FormBuilderID);
 				if($scope.FormBuilderID != "null") {
 					templateAPI.get($scope.FormBuilderID,function(data) {
 						$scope.model = data;
@@ -938,8 +970,10 @@ angular.module('formdisplayer')
 				var displayer = this;
 				var mode = "";
 
-				console.log(typeof $scope.TemplateID);
-				console.log(typeof $scope.FormID);
+				$scope.showSuccess = false;
+				$scope.successMessage = "";
+				$scope.showError = false;
+				$scope.errorMessage = "";
 
 				if(typeof $scope.FormID != "undefined") {
 					formAPI.get($scope.FormID,function(data) {
@@ -957,6 +991,19 @@ angular.module('formdisplayer')
 				$scope.saveForm = function() {
 					formAPI.save($scope.model,function(data){
 						console.log(data);
+						if(data.result == "success") {
+							$scope.showSuccess = true;
+							$scope.successMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showSuccess = false;
+							},3000);
+						} else {
+							$scope.showError = true;
+							$scope.errorMessage = "Your form template was saved sucessfully!";
+							$timeout(function(){
+								$scope.showError = false;
+							}, 1000);
+						}
 					});
 				};
 			}]

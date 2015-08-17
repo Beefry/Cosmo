@@ -12,11 +12,33 @@ gulp.task('sass', function() {
 		.pipe(sass())
 		.pipe(sourcemaps.write("maps"))
 		.pipe(gulp.dest('Content'))
+		.pipe(rename(function(path) {
+			path.extname = ".min.css";
+		}))
 		.pipe(cssmin())
-		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest('Content'));
+		.pipe(gulp.dest('Content/min'));
+});
+
+gulp.task('concat', function(){
+	gulp.src([
+		'App/js/angular.min.js',
+		'App/js/angular-resource.min.js',
+		'App/angularjs/sortable.js',
+		'App/angularjs/main.js',
+		'App/angularjs/Components/Models.js',
+		'App/angularjs/GlobalFunctions.js',
+		'App/angularjs/**/*Module.js',
+		'App/angularjs/**/*Models.js',
+		'App/angularjs/**/*Routes.js',
+		'App/angularjs/**/*Services.js',
+		'App/angularjs/**/*Directives.js',
+		'App/angularjs/**/*Controllers.js',
+	])
+	.pipe(concat('app.js'))
+	.pipe(gulp.dest('Scripts/'));
 });
 
 gulp.task('default', function() {
 	gulp.watch('Content/scss/**/*.scss',['sass']);
+	gulp.watch('App/angularjs/**/*.js',['concat']);
 });

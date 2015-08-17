@@ -30,7 +30,7 @@ namespace Cosmo.Areas.API.Controllers
                 try
                 {
                     template.Save();
-                    return new { result = "Success" };
+                    return new { result = "success" };
                 }
                 catch (Exception ex)
                 {
