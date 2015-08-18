@@ -269,12 +269,8 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\API\Views\web.config" />
-<<<<<<< HEAD
     <Content Include="bin\Cosmo.dll.config" />
     <None Include="Properties\PublishProfiles\Profile1.pubxml" />
-=======
-    <None Include="Properties\PublishProfiles\profile1.pubxml" />
->>>>>>> origin/master
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\formbuilder.js" />
     <Content Include="Scripts\FormBuilderInit.js" />
@@ -292,14 +288,11 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Templates\Builder.htm" />
-<<<<<<< HEAD
     <Content Include="Templates\Displayer.htm" />
     <Content Include="Web.config" />
-=======
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
->>>>>>> origin/master
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -331,13 +324,10 @@
     <Content Include="Views\Form\Details.cshtml" />
     <Content Include="Views\Form\Index.cshtml" />
     <Content Include="Views\Form\Edit.cshtml" />
-<<<<<<< HEAD
     <Content Include="Views\Maintenance\Create.cshtml" />
     <Content Include="Views\Maintenance\Index.cshtml" />
     <Content Include="Views\Maintenance\Edit.cshtml" />
-=======
     <Content Include="Views\Home\Dashboard.cshtml" />
->>>>>>> origin/master
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
