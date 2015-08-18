@@ -37,7 +37,7 @@ namespace Cosmo.Controllers
         // GET: /Maintenance/Create
         public ActionResult Create()
         {
-            ViewBag.FormBuilder["tid"] = "3";
+            ViewBag.FormBuilder["tid"] = "1";
             return View();
         }
 
