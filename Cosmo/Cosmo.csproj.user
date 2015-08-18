@@ -7,7 +7,12 @@
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ProjectView>ShowAllFiles</ProjectView>
+<<<<<<< HEAD
     <NameOfLastUsedPublishProfile>Profile1</NameOfLastUsedPublishProfile>
+=======
+    <NameOfLastUsedPublishProfile>profile1</NameOfLastUsedPublishProfile>
+    <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
+>>>>>>> origin/master
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

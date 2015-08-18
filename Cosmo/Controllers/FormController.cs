@@ -12,7 +12,7 @@ namespace Cosmo.Controllers
     {
         //
         // GET: /Form/
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
             
@@ -32,7 +32,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Details/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Details(int id)
         {
             ViewBag.FormAPIPath = "/API/Form/";
@@ -42,8 +42,13 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Create
+<<<<<<< HEAD
         [Authorize]
         public ActionResult Create(int id)
+=======
+        //[Authorize]
+        public ActionResult Create(int? id)
+>>>>>>> origin/master
         {
             ViewBag.FormAPIPath = "/API/Form/";
             ViewBag.redirectPath = Url.Action("Index");
@@ -52,7 +57,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Edit/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Edit(int? id)
         {
             ViewBag.FormAPIPath = "/API/Form/";

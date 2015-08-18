@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class='fb-error' ng-class="{'show': showError==true}">{{errorMessage}}</div>
 <div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
 <form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
@@ -36,15 +37,67 @@
 							</div>
 							<div ng-switch-when="select">
 								<div class='fb-field-title'>{{field.Label}}</div>
+=======
+<form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
+	<section class='fb-section--meta'>
+		<div class='fb-template-title'>{{model.Name}}</div>
+		<div>
+			<label>
+				<span>Template ID</span>
+				<input type="text" ng-model="model.Template.ID"/>
+			</label>
+		</div>
+		<div>
+			<label>
+				<span>Form ID: </span><span type="text" ng-model="model.ID"></span>
+			</label>
+		</div>
+	</section>
+	<section class='fb-sections'>
+		<ul>
+			<li class='section' ng-repeat="section in model.Sections">
+				<ul>
+					<li class='field-group' ng-repeat="field in section.Fields">
+						{{field.Type}}
+						<div class='fb-field' ng-switch on="field.Type">
+							<div ng-switch-when="text">
+								<h3>{{field.Label}}</h3>
+								<p>{{field.Options[0].Value}}</p>
+							</div>
+							<div ng-switch-when="textbox">
+								<h3>{{field.Label}}</h3>
+								<input type="text" ng-model="field.Values[0].Content"/>
+							</div>
+							<div ng-switch-when="textarea">
+								<h3>{{field.Label}}</h3>
+								<textarea ng-model="field.Values[0].Content"/>
+							</div>
+							<div ng-switch-when="radio">
+								<h3>{{field.Label}}</h3>
+								<label ng-repeat="option in field.Options">
+									<span>{{option.Value}}</span>
+									<input type="radio" name="{{field.ID}}" ng-model="field.Values[0].Content"/>
+								</label>
+							</div>
+							<div ng-switch-when="select">
+								<h3>{{field.Label}}</h3>
+>>>>>>> origin/master
 								<select>
 									<option ng-repeat="option in field.Options" ng-selected="field.Values[0].Content">{{option.Value}}</option>
 								</select>
 							</div>
 							<div ng-switch-when="checkbox">
+<<<<<<< HEAD
 								<div class='fb-field-title'>{{field.Label}}</div>
 								<label ng-repeat="option in field.Options">
 									<span>{{option.Value}}</span>
 									<input type="checkbox" name="{{option.ID}}" ng-model="field.Values[$index].Content" required/>
+=======
+								<h3>{{field.Label}}</h3>
+								<label ng-repeat="option in field.Options">
+									<span>{{option.Value}}</span>
+									<input type="checkbox" name="{{option.ID}}" ng-model="field.Values[$index].Content"/>
+>>>>>>> origin/master
 								</label>
 							</div>
 						</div>
@@ -52,9 +105,17 @@
 				</ul>
 			</li>
 		</ul>
+<<<<<<< HEAD
 		<div class='field-controls'></div>
 	</section>
 	<section class='form-controls'>
 		<button class="frm-btn" type="submit">Save Form</button>
+=======
+		<!--Why is this here???-->
+		<div class='field-controls'></div>
+	</section>
+	<section class='form-controls'>
+		<button ng-click="saveForm()">Submit Form</button>
+>>>>>>> origin/master
 	</section>
 </form>

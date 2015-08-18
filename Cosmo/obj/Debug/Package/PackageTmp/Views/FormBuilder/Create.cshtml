@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    ViewBag.isFormBuilder = true;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create new Template</h2>
+
+@Html.Raw(String.Format(Beefry.FormBuilder.Template.FormBuilderEditDirective,Model==null?"null":Model))

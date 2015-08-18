@@ -42,5 +42,9 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+<<<<<<< HEAD
 Cosmo/Cosmo/bin/
 Cosmo/Cosmo/obj/
+=======
+Cosmo/node_modules/
+>>>>>>> origin/master

@@ -12,7 +12,7 @@ namespace Cosmo.Controllers
     {
         //
         // GET: /Form/
-        [Authorize]
+        //[Authorize]
         public ActionResult Index()
         {
             Beefry.FormBuilder.TemplateDataAdapter adapter = new TemplateDataAdapter();
@@ -22,7 +22,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Details/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Details(int id)
         {
             return View();
@@ -30,7 +30,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Create
-        [Authorize]
+        //[Authorize]
         public ActionResult Create()
         {
             
@@ -41,7 +41,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Form/Edit/5
-        [Authorize]
+        //[Authorize]
         public ActionResult Edit(int id)
         {
             ViewBag.FormAPIPath = "/API/Template/";
