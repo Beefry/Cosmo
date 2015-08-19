@@ -1,6 +1,5 @@
 angular.module('formdisplayer')
 	.directive('formdisplayer',function(){
-<<<<<<< HEAD
 		return {
 			templateUrl:'/Templates/Displayer.htm',
 			restrict:'E',
@@ -53,8 +52,6 @@ angular.module('formdisplayer')
 		}
 	})
 	.directive('formeditor',function(){
-=======
->>>>>>> origin/master
 		return {
 			templateUrl:'/Templates/Displayer.htm',
 			restrict:'E',
@@ -65,15 +62,10 @@ angular.module('formdisplayer')
 			controllerAs: 'Displayer',
 			controller: ['$scope','formAPI',function($scope,formAPI){
 				var displayer = this;
-<<<<<<< HEAD
 				var mode = "";
 				console.log($scope.TemplateID);
 
 				if($scope.FormID != "") {
-=======
-
-				if(typeof $scope.FormID != "undefined") {
->>>>>>> origin/master
 					formAPI.get($scope.FormID,function(data) {
 						$scope.model = data;
 						mode = "edit";

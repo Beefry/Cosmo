@@ -19,19 +19,11 @@
             <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "navbar-brand" })</li>
             <li>@Html.ActionLink("Templates", "Index", "FormBuilder")</li>
             <li>@Html.ActionLink("Forms", "Index", "Form")</li>
-<<<<<<< HEAD
             <li>@Html.ActionLink("Maintenance","Index","Maintenance")</li>
         </ul>
         <div class="second_controls">
             @Html.Partial("_LoginPartial")
             @Html.ActionLink("+ New Ticket", "Create", "Maintenance", null, new { @class = "new_tic cd-btn" });
-=======
-            <li><a href='#'><span>Maintenance</span></a></li>
-        </ul>
-        <div class="second_controls">
-            @Html.Partial("_LoginPartial")
-            <a class='new_tic cd-btn' href='#0'>+ New Ticket</a>
->>>>>>> origin/master
         </div>            
     </div>
     <main ng-app="beefry.fb">
@@ -43,20 +35,8 @@
     <script src="content-filter/js/main.js"></script> <!-- Resource jQuery -->
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-<<<<<<< HEAD
     @Scripts.Render("~/bundles/formbuilder")
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-=======
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js"></script>
-    @{ if (ViewBag.isFormBuilder != null)
-     {
-        @Scripts.Render("~/bundles/formbuilder")
-        <script>angular.module('formbuilder').constant('templateAPIPath', '@ViewBag.FormAPIPath');</script>
-        <script>angular.module('formdisplayer').constant('formAPIPath', '@ViewBag.FormAPIPath');</script>
-        <script>angular.module('formbuilder').constant('redirectPath', '@ViewBag.redirectPath');</script>
-     }
-    }
->>>>>>> origin/master
     @RenderSection("scripts", required: false)
 </body>
 </html>

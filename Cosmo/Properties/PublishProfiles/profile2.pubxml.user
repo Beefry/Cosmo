@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfFZsptp+IEiEk9EhMbjb9AAAAAACAAAAAAAQZgAAAAEAACAAAACIsCNWmfwdFdOK4Cp1MLq1+O7CdVGB9WE6QN4zGev0QwAAAAAOgAAAAAIAACAAAACqlM5dTXzKwwrn0ELMuiGDqJWEr/mlJi3P8x4V0nl9BCAAAAAryH+I1LJ8RtiY6Cn0NWJp0onTk89LEEZM3dkaNw1cJEAAAACmeB5KreL5ghCTesZTcwoRgV4wfAmrSsAqTzBzUzBFs/3WjaHQidHBF0zic0idG9ng59cTIXD9hN4D94T7IPNX</EncryptedPassword>
+    <_PublishTargetUrl>C:\Web Projects\Publish\Cosmo</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

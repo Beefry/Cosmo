@@ -8,7 +8,6 @@ main[ng-app] .fb-template-title {
   font-size: 1.8em;
   margin: 20px 0px; }
 
-<<<<<<< HEAD
 .fb-overlay, .fb-error, .fb-success {
   position: fixed;
   left: 50%;
@@ -39,8 +38,6 @@ main[ng-app] .fb-template-title {
   background-color: green;
   border: 2px solid #004d00; }
 
-=======
->>>>>>> origin/master
 .frm-btn {
   background: linear-gradient(#89ba2c, #6C9225);
   border: 2px solid #A3C169;
@@ -902,11 +899,7 @@ input[type=checkbox]:checked + label::after {
   position: fixed;
   top: 0px;
   left: 0px;
-<<<<<<< HEAD
   z-index: 600; }
-=======
-  z-index: 3; }
->>>>>>> origin/master
 
 #navmenu ul {
   list-style: none;

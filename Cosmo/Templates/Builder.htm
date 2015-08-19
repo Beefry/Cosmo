@@ -2,7 +2,7 @@
 <div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
 <form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
     <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name" required ng-model-options="{ updateOn: 'blur' }" />
-    <section class='fb-section--meta'>
+    <section class='fb-meta fb-section'>
         <div class='fb-section-title'>Template Information</div>
         <div class='fb-field'>
             <label>

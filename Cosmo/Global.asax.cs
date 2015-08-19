@@ -24,10 +24,25 @@ namespace Cosmo
             //Formbuilder config
             //Config.DefaultSettings["DatabaseHostname"] = @"COOPER\SQLEXPRESS";
             Config.DefaultSettings["DatabaseHostname"] = @"172.31.36.204\COSMO";
-            Config.DefaultSettings["DatabaseHostname"] = @"WIN-A562EOL5BFO\COSMO";
             Config.DefaultSettings["DatabaseUsername"] = "sa";
             Config.DefaultSettings["DatabasePassword"] = "1324#By%eish1";
             Config cosmoFBConfig = new Config(Server);
+
+            if (!Roles.GetAllRoles().Contains("Administrator"))
+            {
+                Roles.CreateRole("Administrator");
+            }
+
+            if (!Roles.GetAllRoles().Contains("User"))
+            {
+                Roles.CreateRole("User");
+            }
+
+            if (Membership.GetUser("admin") == null)
+            {
+                Membership.CreateUser("admin", "admin12345","");
+                Roles.AddUsersToRole(new [] {"admin"}, "Administrator");
+            }
         }
     }
 }
