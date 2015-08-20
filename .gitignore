@@ -44,6 +44,8 @@ Temporary Items
 
 Cosmo/Cosmo/bin/
 Cosmo/Cosmo/obj/
+Cosmo/bin/
+Cosmo/obj/
 
 Cosmo.v12.suo
 Cosmo/obj/Debug/Cosmo.csproj.FileListAbsolute.txt
