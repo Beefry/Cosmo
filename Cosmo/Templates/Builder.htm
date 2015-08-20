@@ -37,6 +37,12 @@
                                 <li class="fb-option fb-option-new" ng-click="addNewOption(field)">Add Option</li>
                             </ul>
                         </div>
+                        <div class='fb-admin-field'>
+                            <label>
+                                <input type="checkbox" ng-model="field.AdminField"/>
+                                <span>Admin Only Field</span>
+                            </label>
+                        </div>
                     </li>
                     <li class='fb-field fb-field-new'>
                         <select class='new-field-type' ng-model="section.newFieldType">

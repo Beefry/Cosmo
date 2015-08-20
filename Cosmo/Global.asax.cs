@@ -22,8 +22,8 @@ namespace Cosmo
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
             //Formbuilder config
-            //Config.DefaultSettings["DatabaseHostname"] = @"COOPER\SQLEXPRESS";
-            Config.DefaultSettings["DatabaseHostname"] = @"172.31.36.204\COSMO";
+            Config.DefaultSettings["DatabaseHostname"] = @"COOPER\SQLEXPRESS";
+            //Config.DefaultSettings["DatabaseHostname"] = @"172.31.36.204\COSMO";
             Config.DefaultSettings["DatabaseUsername"] = "sa";
             Config.DefaultSettings["DatabasePassword"] = "1324#By%eish1";
             Config cosmoFBConfig = new Config(Server);

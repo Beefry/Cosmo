@@ -22,7 +22,7 @@ namespace Cosmo.Controllers
         public ActionResult Index()
         {
             FormDataAdapter adapter = new FormDataAdapter();
-            List<Form> Forms = adapter.GetForms(TemplateID:3);
+            List<Form> Forms = adapter.GetForms(TemplateID: 3, User:User);
             return View(Forms);
         }
 

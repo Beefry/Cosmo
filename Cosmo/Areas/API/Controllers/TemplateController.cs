@@ -13,13 +13,13 @@ namespace Cosmo.Areas.API.Controllers
         // GET api/template
         public List<Template> Get()
         {
-            return ((new TemplateDataAdapter()).GetTemplates()).ToList();
+            return ((new TemplateDataAdapter()).GetTemplates(User)).ToList();
         }
 
         // GET api/template/5
         public Template Get(int id)
         {
-            return new Template(id);
+            return new Template(id,User);
         }
 
         // POST api/template

@@ -1,0 +1,3 @@
+use beefryfb;
+
+ALTER TABLE dbo.bf_fields ADD AdminField bit;

@@ -14,7 +14,7 @@ namespace Cosmo.Areas.API.Controllers
         public List<Form> Get()
         {
             FormDataAdapter adapter = new FormDataAdapter();
-            List<Form> Forms = adapter.GetForms();
+            List<Form> Forms = adapter.GetForms(User);
             return Forms;
         }
     }

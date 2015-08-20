@@ -497,17 +497,6 @@ h4 {
 		}
 	}
 
-	input[type=radio],
-	input[type=checkbox] {
-		/* hide original check and radio buttons */
-		position: absolute;
-		left: 0;
-		top: 0;
-		margin: 0;
-		padding: 0;
-		opacity: 0;
-		z-index: 2;
-	}
 
 	.checkbox-label,
 	.radio-label {

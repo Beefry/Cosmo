@@ -20,7 +20,7 @@ namespace Cosmo.Controllers
             List<Form> Forms;
             try
             {
-                Forms = adapter.GetForms();
+                Forms = adapter.GetForms(User);
                 return View(Forms);
             }
             catch (Exception ex)

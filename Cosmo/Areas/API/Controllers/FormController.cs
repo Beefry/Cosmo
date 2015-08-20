@@ -18,7 +18,7 @@ namespace Cosmo.Areas.API.Controllers
             if (templateID.HasValue)
             {
                 Form f = new Form();
-                f.New(templateID.Value);
+                f.New(templateID.Value, User);
                 return f;
             }
             else
@@ -33,7 +33,7 @@ namespace Cosmo.Areas.API.Controllers
             try
             {
                 Form f = new Form();
-                f.Load(id);
+                f.Load(id, User);
                 return f;
             }
             catch (Exception ex)

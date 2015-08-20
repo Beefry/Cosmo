@@ -16,7 +16,7 @@ namespace Cosmo.Controllers
         public ActionResult Index()
         {
             Beefry.FormBuilder.TemplateDataAdapter adapter = new TemplateDataAdapter();
-            Beefry.FormBuilder.TemplateCollection templates = adapter.GetTemplates();
+            Beefry.FormBuilder.TemplateCollection templates = adapter.GetTemplates(User);
             return View(templates);
         }
 

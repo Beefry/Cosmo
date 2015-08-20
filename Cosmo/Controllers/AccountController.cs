@@ -82,6 +82,7 @@ namespace Cosmo.Controllers
             {
                 var user = new ApplicationUser() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user, model.Password);
+                System.Web.Security.Roles.AddUsersToRole(new string [] { user.UserName }, "User");
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);
