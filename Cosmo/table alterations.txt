@@ -1,3 +1,4 @@
 use beefryfb;
 
 ALTER TABLE dbo.bf_fields ADD AdminField bit;
+UPDATE dbo.bf_fields SET AdminField = 0;
