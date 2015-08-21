@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class='fb-field fb-field-new'>
-                        <select class='new-field-type' ng-model="section.newFieldType">
+                        <select class='new-field-type' ng-change="addField(section)" ng-model="section.newFieldType">
                             <option value="">Add a new field</option>
                             <option value="textbox">Textbox</option>
                             <option value="text">Text</option>

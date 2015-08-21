@@ -44,3 +44,13 @@ Temporary Items
 
 Cosmo/Cosmo/bin/
 Cosmo/Cosmo/obj/
+Cosmo/bin/
+Cosmo/obj/
+Cosmo/Properties/
+
+Cosmo.v12.suo
+Cosmo/obj/Debug/Cosmo.csproj.FileListAbsolute.txt
+*.cache
+Cosmo/obj/Debug/Cosmo.dll
+*.pdb
+Cosmo/Properties/PublishProfiles/Profile1.pubxml
