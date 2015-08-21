@@ -1,12 +1,12 @@
 <div class='fb-error' ng-class="{'show': showError==true}">{{errorMessage}}</div>
 <div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
 <form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
-    <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name" required ng-model-options="{ updateOn: 'blur' }" />
-    <textarea ng-model="model.Description" class="fb-desc" placeholder="Template Description" required ng-model-options="{ updateOn: 'blur' }"> </textarea>
+    <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name Here..." required ng-model-options="{ updateOn: 'blur' }" />
+    <textarea ng-model="model.Description" class="fb-desc" placeholder="Template Description..." required ng-model-options="{ updateOn: 'blur' }"> </textarea>
     <section class='sections'>
         <ul ui-sortable ng-model="model.Sections">
             <li class='fb-section' ng-repeat="section in model.Sections">
-                <input class='fb-section-title' type="text" ng-model="section.Name" placeholder="Section Name" required ng-model-options="{ updateOn: 'blur' }" />
+                <input class='fb-section-title' type="text" ng-model="section.Name" placeholder="Section Name..." required ng-model-options="{ updateOn: 'blur' }" />
                 <ul ui-sortable ng-model="section.Fields">
                     <li class='fb-field' ng-repeat="field in section.Fields">
                         <div class='field-main'>
@@ -16,7 +16,7 @@
                             <textarea ng-model='field.Options[0].Value' />
                         </div>
                         <div class='fb-field-options' ng-show="field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'">
-                            <div class='fb-field-type-label'>Field Type here</div>
+                            <div class='fb-field-type-label'>{{field.Type}}</div>
                             <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' placeholder='Field Name...' required ng-model-options="{ updateOn: 'blur' }"/>
                             <ul ui-sortable ng-model="field.Options">
                                 <li class='fb-option' ng-repeat="option in field.Options">

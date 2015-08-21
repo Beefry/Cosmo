@@ -4,10 +4,21 @@ main[ng-app] input, main[ng-app] select, main[ng-app] option {
   padding: 0 5px;
 }
 
+main[ng-app] h2 {
+  color: rgba(255, 255, 255, 0.2);
+}
+
 main[ng-app] .fb-template-title {
   height: 1.5em;
   font-size: 1.8em;
   margin: 20px 0px;
+  max-width: 500px !important;
+}
+
+main[ng-app] .fb-desc {
+  display: block;
+  max-width: 500px !important;
+  height: 80px;
 }
 
 .fb-overlay, .fb-error, .fb-success {
@@ -46,19 +57,14 @@ main[ng-app] .fb-template-title {
 }
 
 .frm-btn {
-  background: linear-gradient(#89ba2c, #6C9225);
+  background: #89ba2c;
   border: 2px solid #A3C169;
   padding: 10px 15px;
-  text-shadow: 1px 1px 1px #fff;
   border-radius: 3px;
 }
 
 .frm-btn:active, .frm-btn:hover {
-  background: linear-gradient(#6C9225, #89ba2c);
-}
-
-.fb-desc {
-  display: block;
+  background: #6C9225;
 }
 
 .fb-section {
@@ -70,6 +76,7 @@ main[ng-app] .fb-template-title {
 
 .fb-section-new {
   cursor: pointer;
+  text-align: center;
 }
 
 .fb-section-title {
@@ -83,9 +90,12 @@ main[ng-app] .fb-template-title {
   font-size: 1.2em;
 }
 
-.fb-section-new:hover, .fb-field-new:hover, .fb-option-new:hover:hover {
+.fb-section-new, .fb-option-new {
+  border: 5px dashed rgba(137, 186, 44, 0.5);
+}
+
+.fb-section-new:hover, .fb-option-new:hover {
   border: 5px dashed rgba(137, 186, 44, 0.3);
-  background: #5c6976;
 }
 
 .fb-field {
@@ -103,8 +113,21 @@ main[ng-app] .fb-template-title {
 }
 
 .fb-field-new {
+  display: flex;
+  justify-content: center;
   background: transparent;
   padding: 20px;
+  border: none;
+}
+
+.fb-field .new-field-type {
+  border: 5px dashed rgba(137, 186, 44, 0.5);
+  padding: 10px 5px;
+  height: initial;
+}
+
+.fb-field .new-field-type:hover {
+  border: 5px dashed rgba(137, 186, 44, 0.3);
 }
 
 .fb-field-title {
@@ -160,7 +183,7 @@ main[ng-app] .fb-template-title {
 }
 
 input.ng-invalid.ng-touched {
-  border: 1px solid red;
+  border: 1px solid #e74c3c;
 }
 
 /* --------------------------------
@@ -188,10 +211,12 @@ body {
 a {
   color: #89ba2c;
   text-decoration: none;
+  font-weight: 800;
 }
 
 a:hover {
   color: #70A113;
+  text-decoration: none;
 }
 
 main {
