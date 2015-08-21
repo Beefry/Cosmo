@@ -2,15 +2,7 @@
 <div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
 <form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
     <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name" required ng-model-options="{ updateOn: 'blur' }" />
-    <section class='fb-meta fb-section'>
-        <div class='fb-section-title'>Template Information</div>
-        <div class='fb-field'>
-            <label>
-                <span>Description</span>
-                <input type='text' ng-model="model.Description" placeholder="Description" required ng-model-options="{ updateOn: 'blur' }" />
-            </label>
-        </div>
-    </section>
+    <textarea ng-model="model.Description" class="fb-desc" placeholder="Template Description" required ng-model-options="{ updateOn: 'blur' }"> </textarea>
     <section class='sections'>
         <ul ui-sortable ng-model="model.Sections">
             <li class='fb-section' ng-repeat="section in model.Sections">
@@ -18,15 +10,14 @@
                 <ul ui-sortable ng-model="section.Fields">
                     <li class='fb-field' ng-repeat="field in section.Fields">
                         <div class='field-main'>
-                            <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' placeholder='Field Name' required ng-model-options="{ updateOn: 'blur' }"/>
-
                             <a class="close-btn" ng-click="removeField(section,field)">X</a>
                         </div>
                         <div class='field-text-value' ng-show='field.Type == "text"'>
                             <textarea ng-model='field.Options[0].Value' />
                         </div>
                         <div class='fb-field-options' ng-show="field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'">
-                            <div>Values:</div>
+                            <div class='fb-field-type-label'>Field Type here</div>
+                            <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' placeholder='Field Name...' required ng-model-options="{ updateOn: 'blur' }"/>
                             <ul ui-sortable ng-model="field.Options">
                                 <li class='fb-option' ng-repeat="option in field.Options">
                                     <div>
@@ -46,7 +37,7 @@
                     </li>
                     <li class='fb-field fb-field-new'>
                         <select class='new-field-type' ng-model="section.newFieldType">
-                            <option value="">[New field type]</option>
+                            <option value="">Add a new field</option>
                             <option value="textbox">Textbox</option>
                             <option value="text">Text</option>
                             <option value="textarea">Textarea</option>
@@ -54,11 +45,10 @@
                             <option value="checkbox">Checkbox</option>
                             <option value="select">Select</option>
                         </select>
-                        <div ng-click="addField(section)">Add Field</div>
                     </li>
                 </ul>
                 <div class='field-controls'>
-                    
+
                 </div>
                 <div class="section_controls">
                     <a class='close-btn' type="button" ng-click="removeSection(section)">X</a>

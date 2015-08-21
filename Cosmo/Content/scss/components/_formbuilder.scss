@@ -36,13 +36,13 @@ main[ng-app] {
 	border:2px solid ($error-background)-#333;
 }
 
-.fb-success { 
+.fb-success {
 	@extend .fb-overlay;
 	background-color:$success-background;
 	border:2px solid ($success-background)-#333;
 }
 
-.frm-btn { 
+.frm-btn {
 	background:linear-gradient($color-2,$color-2-darker);
 	border:2px solid $color-2-lighter;
 	padding:10px 15px;
@@ -53,17 +53,15 @@ main[ng-app] {
 		background:linear-gradient($color-2-darker, $color-2);
 	}
 }
-
+.fb-desc{
+	display:block;
+}
 .fb-section {
 	padding:30px;
-	border:1px solid white;
+	border:5px solid #293643;
 	margin:20px 0px;
 	position:relative;
-
-	&-new {
-		border:1px dashed white;
-		text-align: center;
-		color:white;
+	&-new{
 		cursor:pointer;
 	}
 	&-title {
@@ -74,40 +72,37 @@ main[ng-app] {
 		padding:0px 5px;
 		border:none;
 		height:1em;
+		font-size:1.2em;
+	}
+}
+.fb-section-new, .fb-field-new, .fb-option-new:hover{
+	&:hover{
+		border:5px dashed rgba(137, 186, 44, .3);
+		background:#5c6976
 	}
 }
 
 .fb-field {
 	margin:20px 0px;
-	border:1px solid white;
+	border:1px solid rgba(255,255,255,0.1);
+	background:#4f5c69;
 	padding:20px 10px;
 	position:relative;
 	min-height:50px;
-	
+
 	textarea {
 		width:100%;
 		max-width:100%;
 	}
 
 	&-new {
-		border:1px dashed white;
-		text-align: center;
-		color:white;
+		background:transparent;
 		padding:20px;
-
-		div {
-			display:inline-block;
-			height:100%;
-			font-size:1.3em;
-			margin-left:10px;
-			cursor:pointer;
-		}
 	}
 
 	&-title {
-		position:absolute;
-		top:-8px;
-		left:10px;
+		display:block;
+		margin-bottom:20px;
 		background-color:$color-3;
 		padding:0px 5px;
 		border:none;
@@ -117,8 +112,20 @@ main[ng-app] {
 	&-options {
 		margin-top:5px;
 	}
+.fb-field-type-label{
+	margin-bottom:20px;
+	color:rgba(255,255,255,0.2);
+	text-align:center;
+}
+.fb-admin-field label{
+	display:flex;
+	align-items:center;
 
-	.fb-option {
+	& input{
+		margin-right:5px;
+	}
+}
+.fb-option {
 		margin:20px 0px;
 		position:relative;
 
@@ -128,6 +135,11 @@ main[ng-app] {
 			color:white;
 			padding:10px;
 			cursor:pointer;
+			width:60%;
+		}
+
+		&>input {
+			width:60%;
 		}
 
 		.close-btn {

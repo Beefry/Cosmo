@@ -33,6 +33,10 @@ body {
 a {
 	color: $color-2;
 	text-decoration: none;
+
+	&:hover{
+		color:#70A113;
+	}
 }
 
 main {
