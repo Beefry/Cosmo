@@ -63,7 +63,7 @@ namespace Cosmo.Controllers
 
         //
         // GET: /Account/Register
-        //[Authorize(Users = "admin")]
+        [Authorize(Roles = "Administrator")]
         [AllowAnonymous]
         public ActionResult Register()
         {
@@ -82,7 +82,7 @@ namespace Cosmo.Controllers
             {
                 var user = new ApplicationUser() { UserName = model.UserName };
                 var result = await UserManager.CreateAsync(user, model.Password);
-                System.Web.Security.Roles.AddUsersToRole(new string [] { user.UserName }, "User");
+                UserManager.AddToRole<ApplicationUser>(user.Id, "User");
                 if (result.Succeeded)
                 {
                     await SignInAsync(user, isPersistent: false);

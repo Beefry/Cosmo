@@ -3,39 +3,43 @@
 	{
 		"selected_items":
 		[
+			[
+				"succ",
+				"successMessage"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "Cosmo/Content/scss/style.scss",
-			"settings":
-			{
-				"buffer_size": 15950,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Cosmo/Content/scss/components/_formbuilder.scss",
-			"settings":
-			{
-				"buffer_size": 1621,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Cosmo/Content/scss/partials/_variables.scss",
-			"settings":
-			{
-				"buffer_size": 392,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "Cosmo/Templates/Builder.htm",
 			"settings":
 			{
-				"buffer_size": 3842,
+				"buffer_size": 4058,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Cosmo/App/angularjs/Components/Formbuilder/BuilderDirectives.js",
+			"settings":
+			{
+				"buffer_size": 3355,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Cosmo/Content/scss/style.scss",
+			"settings":
+			{
+				"buffer_size": 15835,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Cosmo/table alterations.txt",
+			"settings":
+			{
+				"buffer_size": 101,
 				"line_ending": "Windows"
 			}
 		}
@@ -92,43 +96,54 @@
 		"/C/Web Projects/Projects/Cosmo",
 		"/C/Web Projects/Projects/Cosmo/Cosmo",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/App",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/App/Templates",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/components",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys/partials",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys/scss"
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Templates"
 	],
 	"file_history":
 	[
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Models.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/table alterations.txt",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/style.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/components/_formbuilder.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Templates/Displayer.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Formdisplay/DisplayerDirectives.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Global.asax",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Formbuilder/BuilderDirectives.js",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Templates/Builder.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/web.config",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Cosmo.csproj",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/browse.html",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/index.html",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Cosmo.csproj.user",
+		"/C/Web Projects/Projects/Cosmo/Maint-sys/partials/_variables.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/_variables.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/gulpfile.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Scripts/app.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Formbuilder/BuilderServices.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/GlobalFunctions.js",
+		"/C/Web Projects/Projects/Cosmo/Scripts/app.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/style.css",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/GobalFunctions.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/main.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/displayer.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/builder.htm",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Formdisplay/DisplayerServices.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/style.scss",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/gulpfile.js",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Shared/_Layout.cshtml",
+		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/GlobalServices.js",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/App/Templates/Builder.htm",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/bootstrap.css",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/App/builder.htm",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/FormController.cs",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Form/Create.cshtml",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Controllers/FormBuilderController.cs",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/FormBuilder/Create.cshtml",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/FormBuilder/Edit.cshtml",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys/partials/_variables.scss",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/App/js/angular.js",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/Components/Formbuilder/BuilderDirectives.js",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Areas/API/Controllers/TemplateController.cs",
 		"/C/Web Projects/Projects/Cosmo/CosProj.sublime-project",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/components/_formbuilder.scss",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/_variables.scss",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/style.scss",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/bourbon/_bourbon.scss",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/scss/partials/_mixins.scss",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Shared/_Layout.cshtml",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/gulpfile.js",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/App/gulpfile.js",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/App/angularjs/main.js",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/style.css",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/maps/style.css.map",
-		"/C/Web Projects/Projects/Cosmo/Cosmo/Scripts/app.js",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Views/Shared/_LoginPartial.cshtml",
 		"/C/Users/Coop/AppData/Roaming/Sublime Text 3/Packages/Terminal/Terminal.sublime-settings",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/maps/style.css.map",
@@ -137,8 +152,6 @@
 		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/App/gulpfile.js",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/npm-debug.log",
 		"/C/Web Projects/Projects/FormBuilderModule/FormBuilderModule/App/package.json",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys/index.html",
-		"/C/Web Projects/Projects/Cosmo/Maint-sys/browse.html",
 		"/C/Web Projects/Projects/Cosmo/Maint-sys/scss/style.scss",
 		"/C/Web Projects/Projects/Cosmo/Cosmo/Content/Site.css",
 		"/C/Web Projects/Projects/Cosmo/Maint-sys/js/main.js",
@@ -155,13 +168,31 @@
 		"height": 90.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"input",
+			"<<<<<<<",
+			"System.Web.Http",
+			"Newtonsoft",
+			"<input",
+			"nav",
+			"timeout",
+			"GLOBAL",
+			"GLOBAL FUNCTIONS",
+			"flashInformation",
+			"formbuilder",
+			"nav",
+			"$scope",
+			">\n",
+			"redirectPath",
+			"redirectPathh",
+			"templateAPIPath",
 			".container",
 			"fb-form",
 			"default blur",
@@ -192,58 +223,59 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Cosmo/Content/scss/style.scss",
+					"file": "Cosmo/Templates/Builder.htm",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15950,
+						"buffer_size": 4058,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								389,
-								389
+								1034,
+								1058
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 125.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Cosmo/Content/scss/components/_formbuilder.scss",
+					"file": "Cosmo/App/angularjs/Components/Formbuilder/BuilderDirectives.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1621,
+						"buffer_size": 3355,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								383,
-								383
+								1020,
+								1020
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -255,27 +287,28 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Cosmo/Content/scss/partials/_variables.scss",
+					"file": "Cosmo/Content/scss/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 392,
+						"buffer_size": 15835,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								121,
-								121
+								7852,
+								7852
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage"
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 7039.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -283,32 +316,30 @@
 				},
 				{
 					"buffer": 3,
-					"file": "Cosmo/Templates/Builder.htm",
+					"file": "Cosmo/table alterations.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3842,
+						"buffer_size": 101,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2689,
-								2689
+								0,
+								101
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 312.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -363,12 +394,88 @@
 		"selected_items":
 		[
 			[
-				"builder",
-				"Cosmo\\Templates\\Builder.htm"
+				"directives",
+				"Cosmo\\App\\angularjs\\Components\\Formbuilder\\BuilderDirectives.js"
 			],
 			[
 				"builder.htm",
-				"Cosmo\\App\\builder.htm"
+				"Cosmo\\Templates\\Builder.htm"
+			],
+			[
+				"table",
+				"Cosmo\\table alterations.txt"
+			],
+			[
+				"style.scss",
+				"Cosmo\\Content\\scss\\style.scss"
+			],
+			[
+				"models",
+				"Cosmo\\App\\angularjs\\Components\\Models.js"
+			],
+			[
+				"displayerdire",
+				"Cosmo\\App\\angularjs\\Components\\Formdisplay\\DisplayerDirectives.js"
+			],
+			[
+				"displayer.htm",
+				"Cosmo\\Templates\\Displayer.htm"
+			],
+			[
+				"_variables",
+				"Cosmo\\Content\\scss\\partials\\_variables.scss"
+			],
+			[
+				"variable",
+				"Maint-sys\\partials\\_variables.scss"
+			],
+			[
+				"_formbuil",
+				"Cosmo\\Content\\scss\\components\\_formbuilder.scss"
+			],
+			[
+				"service",
+				"Cosmo\\App\\angularjs\\Components\\Formbuilder\\BuilderServices.js"
+			],
+			[
+				"app.js",
+				"Cosmo\\Scripts\\app.js"
+			],
+			[
+				"gulpfile",
+				"Cosmo\\gulpfile.js"
+			],
+			[
+				"style.css",
+				"Cosmo\\Content\\style.css"
+			],
+			[
+				"directive",
+				"Cosmo\\App\\angularjs\\Components\\Formbuilder\\BuilderDirectives.js"
+			],
+			[
+				"_formb",
+				"Cosmo\\Content\\scss\\components\\_formbuilder.scss"
+			],
+			[
+				"models.js",
+				"Cosmo\\App\\angularjs\\Components\\Models.js"
+			],
+			[
+				"formbuilder.scss",
+				"Cosmo\\Content\\scss\\components\\_formbuilder.scss"
+			],
+			[
+				"services",
+				"Cosmo\\App\\angularjs\\Components\\Formbuilder\\BuilderServices.js"
+			],
+			[
+				"services.js",
+				"Cosmo\\App\\angularjs\\Components\\Formdisplay\\DisplayerServices.js"
+			],
+			[
+				"builder",
+				"Cosmo\\Templates\\Builder.htm"
 			],
 			[
 				"formcontroller.",
@@ -391,10 +498,6 @@
 				"Cosmo\\Views\\FormBuilder\\Create.cshtml"
 			],
 			[
-				"directive",
-				"Cosmo\\App\\angularjs\\Components\\Formbuilder\\BuilderDirectives.js"
-			],
-			[
 				"create.",
 				"Cosmo\\Views\\Form\\Create.cshtml"
 			],
@@ -407,16 +510,8 @@
 				"Cosmo\\Areas\\API\\Controllers\\TemplateController.cs"
 			],
 			[
-				"variable",
-				"Maint-sys\\partials\\_variables.scss"
-			],
-			[
 				"_layout.cshtml",
 				"Cosmo\\Views\\Shared\\_Layout.cshtml"
-			],
-			[
-				"gulpfile",
-				"Cosmo\\gulpfile.js"
 			]
 		],
 		"width": 0.0

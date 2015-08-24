@@ -7,7 +7,9 @@ using System.Web.Routing;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using Beefry.FormBuilder;
-using System.Web.Security;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Cosmo.Models;
 
 namespace Cosmo
 {
@@ -28,20 +30,29 @@ namespace Cosmo
             Config.DefaultSettings["DatabasePassword"] = "1324#By%eish1";
             Config cosmoFBConfig = new Config(Server);
 
-            if (!Roles.GetAllRoles().Contains("Administrator"))
+            IdentityRole adminRole = new IdentityRole("Administrator");
+            IdentityRole userRole = new IdentityRole("User");
+            ApplicationUser adminUser = new ApplicationUser() { UserName = "admin" };
+            ApplicationDbContext context = new ApplicationDbContext();
+
+            UserManager<ApplicationUser> UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            RoleManager<IdentityRole> RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+            if (!RoleManager.RoleExists<IdentityRole>("Administrator"))
             {
-                Roles.CreateRole("Administrator");
+                RoleManager.Create<IdentityRole>(adminRole);
             }
 
-            if (!Roles.GetAllRoles().Contains("User"))
+            if (!RoleManager.RoleExists<IdentityRole>("User"))
             {
-                Roles.CreateRole("User");
+                RoleManager.Create<IdentityRole>(userRole);
             }
-
-            if (Membership.GetUser("admin") == null)
+            
+            if (context.Users.ToList<ApplicationUser>().Count == 0)
             {
-                Membership.CreateUser("admin", "admin12345","");
-                Roles.AddUsersToRole(new [] {"admin"}, "Administrator");
+                ApplicationUser admin = new ApplicationUser() { UserName = "admin" };
+                IdentityResult result = UserManager.Create(admin, "admin12345");
+                UserManager.AddToRole<ApplicationUser>(admin.Id, "Administrator");
             }
         }
     }
