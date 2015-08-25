@@ -11,7 +11,8 @@
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Submited By</th>
+                <th>Form Name</th>
+                <th>Submitted By</th>
                 <th>Submitted Date</th>
                 <th>Template Base</th>
                 <th></th>
@@ -25,6 +26,7 @@
                     {
                         <tr>
                             <td>@form.ID</td>
+                            <td><a href="@Url.Action("View", new { id = form.ID.Value })">form name here</a></td>
                             <td>@form.CreatedBy</td>
                             <td>@form.CreatedDate</td>
                             <td><a href="@Url.Action("Edit", "FormBuilder", new { id = form.Template.ID})">@form.Template.Name</a></td>

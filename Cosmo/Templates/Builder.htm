@@ -13,7 +13,7 @@
                             <a class="close-btn" ng-click="removeField(section,field)">X</a>
                         </div>
                         <div class='fb-field-type-label'>{{field.Type}}</div>
-                        <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' ng-show="field.Type == 'textbox' || field.Type == 'textarea' || 'field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'" placeholder='Field Name...' required ng-model-options="{ updateOn: 'blur' }"/>
+                        <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' ng-show="field.Type == 'textbox' || field.Type == 'textarea' || 'field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'" placeholder='Instructions...' required ng-model-options="{ updateOn: 'blur' }"/>
                         <div class='field-text-value' ng-show='field.Type == "text"'>
                             <textarea ng-model='field.Options[0].Value' />
                         </div>
@@ -42,7 +42,7 @@
                             <option value="textarea">Long Input</option>
                             <option value="radio">Radio</option>
                             <option value="checkbox">Checkbox</option>
-                            <option value="select">Select</option>
+                            <option value="select">Selectbox</option>
                             <option value="text">Text</option>
                         </select>
                     </li>

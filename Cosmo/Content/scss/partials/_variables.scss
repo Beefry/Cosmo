@@ -1,10 +1,10 @@
 // colors
 
-$color-1: #dbe2e9; // blue light
-$color-2: #89ba2c; // green
-$color-2-darker:#6C9225;
-$color-2-lighter:#A3C169;
-$color-3: #424f5c; // blue dark
+$color-1: #ecf0f1; // light grey
+$color-2: #2ecc71; // green
+$color-2-darker: darken($color-2, 10%);
+$color-2-lighter: lighten($color-2, 10%);
+$color-3: #34495e; // blue dark
 $color-4: #ffffff; // white
 
 // fonts
@@ -26,5 +26,5 @@ $tab-filter-height: 50px;
 $nav-height:50px;
 
 // Informational Variables
-$error-background:#B13434;
-$success-background:green;
+$error-background:#e74c3c;
+$success-background: $color-2;
