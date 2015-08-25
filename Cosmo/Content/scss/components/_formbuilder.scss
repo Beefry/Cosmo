@@ -58,7 +58,7 @@ main[ng-app] {
 	border-radius:3px;
 
 	&:active, &:hover {
-		background: $color-2-darker;
+		background: $color-2-lighter;
 	}
 }
 .fb-section {
@@ -84,7 +84,7 @@ main[ng-app] {
 .fb-section-new, .fb-option-new{
 	border:5px dashed rgba(137, 186, 44, .5);
 	&:hover{
-		border:5px dashed rgba(137, 186, 44, .3);
+		border:5px dashed rgba(137, 186, 44, .7);
 	}
 }
 
@@ -113,7 +113,7 @@ main[ng-app] {
 		padding: 10px 5px;
 		height:initial;
 		&:hover{
-			border:5px dashed rgba(137, 186, 44, .3);
+			border:5px dashed rgba(137, 186, 44, .7);
 		}
 	}
 
@@ -147,12 +147,17 @@ main[ng-app] {
 		position:relative;
 
 		&-new {
-			border:1px dashed white;
+		    max-width: 280px;
+			margin-left: 5px;
+			border:2px dashed rgba(137, 186, 44, .5);
 			text-align: center;
 			color:white;
 			padding:10px;
 			cursor:pointer;
 			width:60%;
+			&:hover{
+				border:2px dashed rgba(137, 186, 44, .7);
+			}
 		}
 
 		&>input {
