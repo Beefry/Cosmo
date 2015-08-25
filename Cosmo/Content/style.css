@@ -164,12 +164,18 @@ main[ng-app] .fb-desc {
 }
 
 .fb-field .fb-option-new {
-  border: 1px dashed white;
+  max-width: 280px;
+  margin-left: 5px;
+  border: 2px dashed rgba(137, 186, 44, 0.5);
   text-align: center;
   color: white;
   padding: 10px;
   cursor: pointer;
   width: 60%;
+}
+
+.fb-field .fb-option-new:hover {
+  border: 2px dashed rgba(137, 186, 44, 0.3);
 }
 
 .fb-field .fb-option > input {

@@ -12,12 +12,12 @@
                         <div class='field-main'>
                             <a class="close-btn" ng-click="removeField(section,field)">X</a>
                         </div>
+                        <div class='fb-field-type-label'>{{field.Type}}</div>
+                        <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' ng-show="field.Type == 'textbox' || field.Type == 'textarea' || 'field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'" placeholder='Field Name...' required ng-model-options="{ updateOn: 'blur' }"/>
                         <div class='field-text-value' ng-show='field.Type == "text"'>
                             <textarea ng-model='field.Options[0].Value' />
                         </div>
                         <div class='fb-field-options' ng-show="field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'">
-                            <div class='fb-field-type-label'>{{field.Type}}</div>
-                            <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' placeholder='Field Name...' required ng-model-options="{ updateOn: 'blur' }"/>
                             <ul ui-sortable ng-model="field.Options">
                                 <li class='fb-option' ng-repeat="option in field.Options">
                                     <div>
@@ -38,12 +38,12 @@
                     <li class='fb-field fb-field-new'>
                         <select class='new-field-type' ng-change="addField(section)" ng-model="section.newFieldType">
                             <option value="">Add a new field</option>
-                            <option value="textbox">Textbox</option>
-                            <option value="text">Text</option>
-                            <option value="textarea">Textarea</option>
+                            <option value="textbox">Short Input</option>
+                            <option value="textarea">Long Input</option>
                             <option value="radio">Radio</option>
                             <option value="checkbox">Checkbox</option>
                             <option value="select">Select</option>
+                            <option value="text">Text</option>
                         </select>
                     </li>
                 </ul>
