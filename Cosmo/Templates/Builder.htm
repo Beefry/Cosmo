@@ -1,0 +1,63 @@
+<div class='fb-error' ng-class="{'show': showError==true}">{{errorMessage}}</div>
+<div class='fb-success' ng-class="{'show': showSuccess==true}">{{successMessage}}</div>
+<form name="fb_form" ng-submit="fb_form.$valid && saveForm()">
+    <input class='fb-template-title' type='text' ng-model="model.Name" placeholder="Template Name Here..." required ng-model-options="{ updateOn: 'blur' }" />
+    <textarea ng-model="model.Description" class="fb-desc" placeholder="Template Description..." required ng-model-options="{ updateOn: 'blur' }"> </textarea>
+    <section class='sections'>
+        <ul ui-sortable ng-model="model.Sections">
+            <li class='fb-section' ng-repeat="section in model.Sections">
+                <input class='fb-section-title' type="text" ng-model="section.Name" placeholder="Section Name..." required ng-model-options="{ updateOn: 'blur' }" />
+                <ul ui-sortable ng-model="section.Fields">
+                    <li class='fb-field' ng-repeat="field in section.Fields">
+                        <div class='field-main'>
+                            <a class="close-btn" ng-click="removeField(section,field)">X</a>
+                        </div>
+                        <div class='fb-field-type-label'>{{field.Type}}</div>
+                        <input class='fb-field-title' type='text' ng-model="field.Label" class='field-name' ng-show="field.Type == 'textbox' || field.Type == 'textarea' || 'field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'" placeholder='Instructions...' required ng-model-options="{ updateOn: 'blur' }"/>
+                        <div class='field-text-value' ng-show='field.Type == "text"'>
+                            <textarea ng-model='field.Options[0].Value' />
+                        </div>
+                        <div class='fb-field-options' ng-show="field.Type == 'select' || field.Type == 'radio' || field.Type == 'checkbox'">
+                            <ul ui-sortable ng-model="field.Options">
+                                <li class='fb-option' ng-repeat="option in field.Options">
+                                    <div>
+                                        <input type="text" ng-model="option.Value" ng-model-options="{ updateOn: 'blur' }" />
+                                        <a class="close-btn" type="button" ng-click="removeOption(field,option)">X</a>
+                                    </div>
+                                </li>
+                                <li class="fb-option fb-option-new" ng-click="addNewOption(field)">Add Option</li>
+                            </ul>
+                        </div>
+                        <div class='fb-admin-field'>
+                            <label>
+                                <input type="checkbox" ng-model="field.AdminField"/>
+                                <span>Admin Only Field</span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class='fb-field fb-field-new'>
+                        <select class='new-field-type' ng-change="addField(section)" ng-model="section.newFieldType">
+                            <option value="">Add a new field</option>
+                            <option value="textbox">Short Input</option>
+                            <option value="textarea">Long Input</option>
+                            <option value="radio">Radio</option>
+                            <option value="checkbox">Checkbox</option>
+                            <option value="select">Selectbox</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class='field-controls'>
+
+                </div>
+                <div class="section_controls">
+                    <a class='close-btn' type="button" ng-click="removeSection(section)">X</a>
+                </div>
+            </li>
+            <li class='fb-section fb-section-new' ng-click="addSection()">Add New Section</li>
+        </ul>
+    </section>
+    <section class='form-controls'>
+        <button class="frm-btn" type="submit">Save Form</button>
+    </section>
+</form>
