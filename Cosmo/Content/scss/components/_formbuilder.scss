@@ -25,8 +25,7 @@ main[ng-app] {
 	position:fixed;
 	left:50%;
 	top:-100px;
-	width:80%;
-	@include border-bottom-radius(15px);
+	width:100%;
 	@include transform(translateX(-50%));
 	@include transition(all .5s);
 	z-index:500;
@@ -53,7 +52,7 @@ main[ng-app] {
 
 .frm-btn {
 	background:$color-2;
-	border:2px solid $color-2-lighter;
+	border:none;
 	padding:10px 15px;
 	border-radius:3px;
 
@@ -82,16 +81,16 @@ main[ng-app] {
 	}
 }
 .fb-section-new, .fb-option-new{
-	border:5px dashed rgba(137, 186, 44, .5);
+	border:5px dashed rgba(46, 204, 113, .5);
 	&:hover{
-		border:5px dashed rgba(137, 186, 44, .7);
+		border:5px dashed rgba(46, 204, 113, .9);
 	}
 }
 
 .fb-field {
 	margin:20px 0px;
 	border:1px solid rgba(255,255,255,0.1);
-	background:#4f5c69;
+	background:lighten($color-3, 5%);
 	padding:20px 10px;
 	position:relative;
 	min-height:50px;
@@ -109,18 +108,17 @@ main[ng-app] {
 		border:none;
 	}
 	.new-field-type{
-		border:5px dashed rgba(137, 186, 44, .5);
+		border:5px dashed rgba(46, 204, 113, .5);
 		padding: 10px 5px;
 		height:initial;
 		&:hover{
-			border:5px dashed rgba(137, 186, 44, .7);
+			border:5px dashed rgba(46, 204, 113, .9);
 		}
 	}
 
 	&-title {
 		display:block;
 		margin-bottom:20px;
-		background-color:$color-3;
 		padding:0px 5px;
 		border:none;
 		height:1em;
@@ -128,6 +126,9 @@ main[ng-app] {
 
 	&-options {
 		margin-top:5px;
+	}
+	&input{
+		max-width:500px;
 	}
 .fb-field-type-label{
 	margin-bottom:20px;
@@ -149,19 +150,15 @@ main[ng-app] {
 		&-new {
 		    max-width: 280px;
 			margin-left: 5px;
-			border:2px dashed rgba(137, 186, 44, .5);
+			border:2px dashed rgba(46, 204, 113, .5);
 			text-align: center;
 			color:white;
 			padding:10px;
 			cursor:pointer;
 			width:60%;
 			&:hover{
-				border:2px dashed rgba(137, 186, 44, .7);
+				border:2px dashed rgba(46, 204, 113, .9);
 			}
-		}
-
-		&>input {
-			width:60%;
 		}
 
 		.close-btn {
